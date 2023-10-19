@@ -1,1 +1,112 @@
 # dist-plateau-mobile-ios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**       
+
+`    `**PlateauMobileSDK Eklenmesi Ve Kullanımı**    
+**
+
+
+`        `**V1.0.0**
+
+![](Aspose.Words.ca6d45a8-dd6b-46d7-abc1-37f61e453ff3.001.png)
+
+
+
+
+**1-	SDK’ların Alınması** 
+
+1. Projenin Cartfile dosyasına aşağıdaki kütüphaneler resimdeki gibi eklenir.
+
+github "Alamofire/Alamofire" ~> 5.1
+
+github "daltoniam/Starscream" >= 4.0.0
+
+github "airbnb/lottie-ios" "4.1.2"
+
+github "danielgindi/Charts" == 4.1.0
+
+github "guoyingtao/Mantis" "v2.14.1"
+
+![](Aspose.Words.ca6d45a8-dd6b-46d7-abc1-37f61e453ff3.002.png)
+
+1. Terminalde Cartfile dosyasının olduğu proje dizinine gidilir ve aşağıdaki komut çalıştırılır.
+- carthage update --use-xcframeworks --platform iOS
+
+1. Carthage ile alınan frameworklerin olduğu dizine size iletilen <a name="ole_link9"></a><a name="ole_link10"></a>PlateauMobile.xcframework dosyası, yoga.xcframework ve YogaKit.xcframework kopyalanır.
+
+1. Proje içerisinden tüm frameworkler eklenir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**2-	SDK’nın Çalıştırılması** 
+
+1. import PlateauMobile yapılmalıdır.
+
+1. QMScreenDelegateProtocol implement edilmelidir.
+
+1. showLoadingView ve hideLoadingView override edilmelidir.
+
+1. QBRenderingManager.shared.startApplication(appUrl: "YourAppUrl", showloading: showLoadingView, hideLoading: hideLoadingView, screenDelegate: self) Kullanılarak uygulama başlatılabilir.
+
+![](Aspose.Words.ca6d45a8-dd6b-46d7-abc1-37f61e453ff3.003.png)
+
+
+#
+
