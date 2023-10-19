@@ -47,7 +47,7 @@
 
 `        `**V1.0.0**
 
-![](Aspose.Words.ca6d45a8-dd6b-46d7-abc1-37f61e453ff3.001.png)
+![](ReadmeImages/PlateauMobileKapak.png)
 
 
 
@@ -66,7 +66,7 @@ github "danielgindi/Charts" == 4.1.0
 
 github "guoyingtao/Mantis" "v2.14.1"
 
-![](Aspose.Words.ca6d45a8-dd6b-46d7-abc1-37f61e453ff3.002.png)
+![](ReadmeImages/PlateauMobileCartFile.png)
 
 1. Terminalde Cartfile dosyasının olduğu proje dizinine gidilir ve aşağıdaki komut çalıştırılır.
 - carthage update --use-xcframeworks --platform iOS
@@ -105,7 +105,7 @@ github "guoyingtao/Mantis" "v2.14.1"
 
 1. QBRenderingManager.shared.startApplication(appUrl: "YourAppUrl", showloading: showLoadingView, hideLoading: hideLoadingView, screenDelegate: self) Kullanılarak uygulama başlatılabilir.
 
-![](Aspose.Words.ca6d45a8-dd6b-46d7-abc1-37f61e453ff3.003.png)
+![](ReadmeImages/PlateauMobileKullanımKod.png)
 
 
 #
