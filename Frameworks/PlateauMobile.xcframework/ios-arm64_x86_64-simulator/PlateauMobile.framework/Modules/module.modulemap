@@ -1,0 +1,4 @@
+framework module PlateauMobile {
+  header "PlateauMobile-Swift.h"
+  requires objc
+}
