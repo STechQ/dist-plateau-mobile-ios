@@ -6,9 +6,9 @@
  s.description   = "Description: Plateau Mobile framework package "
  s.license       = "MIT"
  s.author        = { "Başak Arkan" => "basak.arkan@softtech.com.tr" }
- s.platform      = :ios, "11.0"
+ s.platform      = :ios, "12.0"
  s.ios.vendored_frameworks = 'PlateauMobile.xcframework'
- s.swift_version = "4.1"
+ s.swift_version = "5"
  s.source        = { :git => "https://github.com/STechQ/dist-plateau-mobile-ios.git",  :tag => "#{s.version}"  }
  s.pod_target_xcconfig = { 
  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' 
