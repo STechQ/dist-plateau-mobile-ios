@@ -14,8 +14,7 @@
 	github "danielgindi/Charts" == 4.1.0
 
 	github "guoyingtao/Mantis" "v2.14.1"
-
-![](ReadmeImages/PlateauMobileCartFile.png)
+ 
 
 **2. Terminalde Cartfile dosyasının olduğu proje dizinine gidilir ve aşağıdaki komut çalıştırılır.**
 - *carthage update --use-xcframeworks --platform iOS*
