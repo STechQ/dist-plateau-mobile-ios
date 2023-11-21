@@ -1,5 +1,5 @@
 
-## **PlateauMobileSDK Eklenmesi Ve Kullanımı - V1.0**
+## **PlateauMobile SDK Eklenmesi Ve Kullanımı - V1.0.1**
 
 ## **1- SDK’ların Alınması**
 
@@ -51,9 +51,40 @@
 
 **3. showLoadingView ve hideLoadingView override edilmelidir.**
 
-**4. QBRenderingManager.shared.startApplication(appUrl: "YourAppUrl", showloading: showLoadingView, hideLoading: hideLoadingView, screenDelegate: self) Kullanılarak uygulama başlatılabilir.**
+**4. Uygulama başlatma**
 
-![](ReadmeImages/PlateauMobileKullanımKod.png)
+
+    import UIKit
+    import PlateauMobile
+    class ViewController: UIViewController, QMScreenDelegateProtocol {
+    
+	    override func viewDidLoad() {
+	        super.viewDidLoad()
+	        startApp()
+	
+	    }
+	    func showLoadingView() {
+	        /* Loading start */
+	    }
+	
+	    func hideLoadingView() {
+	        /* Loading end */
+	    }
+	
+	    public func startApp()
+	    {
+	        QBRenderingManager.shared.startApplication(appUrl: "Your App Url",
+	                                                   showloading: showLoadingView,
+	                                                   hideLoading: hideLoadingView,
+	                                                   screenDelegate: self)
+	    }
+     }
+
+
+
+
+
+
 
 
 #
