@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+/*otp ekranındaki metin kutuları için eklendi.*/
+body .v-application .sft-fontsize-8 input { font-size:8px !important; }
+body .v-application .sft-fontsize-10 input { font-size: 10px !important; }
+body .v-application .sft-fontsize-12 input { font-size: 12px !important; }
+body .v-application .sft-fontsize-14 input { font-size: 14px !important; }
+body .v-application .sft-fontsize-16 input { font-size: 16px !important; }
+body .v-application .sft-fontsize-18 input { font-size: 18px !important; }
+body .v-application .sft-fontsize-20 input { font-size: 20px !important; }
+body .v-application .sft-fontsize-24 input { font-size: 24px !important; }
+body .v-application .sft-fontsize-28 input { font-size: 28px !important; }
+body .v-application .sft-fontsize-32 input { font-size: 32px !important; }
+body .v-application .sft-fontsize-40 input { font-size: 40px !important; }
+body .v-application .sft-fontsize-48 input { font-size: 48px !important; }
+
+/*otp ekranındaki metin kutuları için eklendi.*/
+.v-text-align-center input { text-align: center !important; }
+
+.v-text-align-left input { text-align: left !important; }
+
+.qLabelTextAllignCenter { text-align: center !important; }
+ 
+.secondHandTitle {font-size:17px !important; text-align: left;}
+
+.v-btnLikeLabel { font-family: "Source Sans Pro", sans-serif; font-size: 14px !important; font-weight: 600 !important; text-transform: none !important; letter-spacing: normal !important; }
+
+/*İkinci el detay ekranı için eklenenler*/
+.secondHandDetailTitleLabel {
+    font-family:'Roboto ', sans-serif !important;
+    font-weight:bold!important;
+    font-size:17pt !important;
+}
+.secondHandDetailSubtitleLabel {
+    font-family:'Roboto ', sans-serif !important;
+    font-weight:lighter!important;
+    font-size:14pt !important;
+    font-weight: lighter;
+    color: rgb(138,141,145);
+}
+
+.secondHandDetailFontWeight400{
+    font-weight: 400;
+}
+
+.secondHandDetailFontWeight600{
+    font-weight: 600;
+}
+
+.secondHandDetailLabel{
+    font-family:'Roboto ', sans-serif !important;
+    font-size:14pt !important;
+}
+
+.secondHandLightboxHeader
+{
+    font-family:'Roboto ', sans-serif !important;
+    font-weight: bolder!important;
+    font-size:16pt !important;
+    color: black !important;
+}
+
+.secondHandDetailSuccessLightboxCardBackground
+{
+    background-color: rgb(240,240,240) !important;
+    border-radius: 11px !important;
+}
+
+/*web data table
+.v-data-table__wrapper> table  { border: none !important;}
+.v-data-table__wrapper> table>tbody>tr>td  { font-weight: bolder;}*/
+
+.data-v-7354eac4{
+    background-color: rgb(165, 18, 18) !important;
+}
+
+.webfooter{
+    height: 200px;
+}
+
+@media (max-width: 800px) {
+    .webfooter{
+        height: 400px;
+    }
+  }
+  
+  /*Custom.css bitis*/
+  
+.v-application,
+.v-application .v-input,
+.v-application input,
+.v-application select,
+.v-application textarea { font-family:'Roboto', sans-serif !important; font-size:14px !important; }
+
+body .v-application .text-h1,
+body .v-application .text-h2,
+body .v-application .text-h3,
+body .v-application .text-h4,
+body .v-application .text-h5,
+body .v-application .text-h6,
+body .v-application .text-display-4,
+body .v-application .text-display-3,
+body .v-application .text-display-2,
+body .v-application .text-display-1,
+body .v-application .text-headline,
+body .v-application .text-title,
+body .v-application .text-subtitle-1,
+body .v-application .text-subtitle-2,
+body .v-application .text-body-1,
+body .v-application .text-body-2,
+body .v-application .text-caption,
+body .v-application .text-overline { font-family:'Roboto', sans-serif !important; }
+
+body .v-application .primary--text { color:#14B5D0 !important; caret-color:#14B5D0 !important; }
+body .v-application .secondary--text { color:#043DB0 !important; caret-color:#043DB0 !important; }
+body .v-application .accent--text { color:#14B5D0 !important; caret-color:#14B5D0 !important; }
+body .v-application .info--text { color:#4A90E2 !important; caret-color:#4A90E2 !important; }
+body .v-application .success--text { color:#36AF47 !important; caret-color:#36AF47 !important; }
+body .v-application .warning--text { color:#F7981C !important; caret-color:#F7981C !important; }
+body .v-application .error--text { color:#ED1C24 !important; caret-color:#ED1C24 !important; }
+
+body .v-application .royalTwo--text { color:#0c3ea3 !important; caret-color:#0c3ea3 !important; }
+
+body .v-application .whiteButton--text { color:#ffffff !important; caret-color:#ffffff !important; }
+
+body .v-application .primary { background-color:#14B5D0 !important; border-color:#14B5D0 !important; }
+body .v-application .secondary { background-color:#043DB0 !important; border-color:#043DB0 !important; }
+body .v-application .accent { background-color:#14B5D0 !important; border-color:#14B5D0 !important; }
+body .v-application .info { background-color:#4A90E2 !important; border-color:#4A90E2 !important; }
+body .v-application .success { background-color:#36AF47 !important; border-color:#36AF47 !important; }
+body .v-application .warning { background-color:#F7981C !important; border-color:#F7981C !important; }
+body .v-application .error { background-color:#ED1C24 !important; border-color:#ED1C24 !important; }
+body .v-application .dark { background-color:#354052 !important; border-color:#354052 !important; }
+
+body .v-application .royalTwo { background-color:#0c3ea3 !important; border-color:#0c3ea3 !important; }
+
+body .v-application .whiteButton--text {border-color:#ffffff !important; }
+
+body .v-application .v-btn.dark { color:#ffffff !important; background:#354052 !important; border-color:#354052 !important; }
+
+
+body .v-application .v-btn.v-btn--outlined { border-color:#ced0da !important; }
+body .v-application .v-btn.v-btn--outlined.primary--text{ color:#14B5D0 !important; border-color:#14B5D0 !important; }
+body .v-application .v-btn.v-btn--outlined.secondary--text{ color:#043DB0 !important; border-color:#043DB0 !important; }
+body .v-application .v-btn.v-btn--outlined.accent--text{ color:#14B5D0 !important; border-color:#14B5D0 !important; }
+body .v-application .v-btn.v-btn--outlined.info--text{ color:#4A90E2 !important; border-color:#4A90E2 !important; }
+body .v-application .v-btn.v-btn--outlined.success--text{ color:#36AF47 !important; border-color:#36AF47 !important; }
+body .v-application .v-btn.v-btn--outlined.warning--text{ color:#F7981C !important; border-color:#F7981C !important; }
+body .v-application .v-btn.v-btn--outlined.error--text{ color:#ED1C24 !important; border-color:#ED1C24 !important; }
+body .v-application .v-btn.v-btn--outlined.royalTwo--text{ color:#0c3ea3 !important; border-color:#0c3ea3 !important; }
+body .v-application .v-btn.v-btn--outlined.whiteButton--text{ color:#ffffff !important; border-color:#ffffff !important; }
+
+body .v-application .v-card.v-sheet--outlined.primary--text{ color:#14B5D0 !important; border-color:#14B5D0 !important; }
+
+body .v-application .v-btn.v-btn--disabled{color:#ffffff !important;}
+
+body .v-application .isl-grdbg01 { background: #043DB0; background: linear-gradient(180deg, #043DB0 0%, #62C5FA 30%, #f4fbfd 65%); }
+/* body .v-application .isl-grdbg02 { background: #dcf3ff; background: linear-gradient(180deg, #FFFFFF 70%, #dcf3ff 100%); } */
+
+/* textfield */
+.v-text-field--outlined.v-input--is-focused fieldset,
+.v-text-field--outlined.v-input--has-state fieldset { border-width:1px !important; }
+
+/* carousel */
+.v-carousel { overflow:visible !important; margin-bottom: 40px; }
+.v-carousel__controls { bottom:-40px !important; background:transparent !important; }
+.v-carousel__controls .v-btn.v-item--active { color:#0d113f !important; border:none !important; height: 14px !important; width: 14px !important; margin-left: 4px !important; margin-right: 4px !important;}
+.v-carousel__controls .v-btn { color:#8c91be  !important; border:none !important; height: 14px !important; width: 14px !important;  margin-left: 4px !important; margin-right: 4px !important;}
+.v-carousel__controls .v-btn > .v-btn__content > .v-icon { font-size: 10px !important; margin-top: 1px !important; }
+
+/* .homeCarousel > .v-carousel__controls .v-btn.v-item--active { color:#ffffff !important; border:none !important; height: 14px !important; width: 14px !important; margin-left: 4px !important; margin-right: 4px !important;} */
+/* tabs */
+.theme--light.v-tabs > .v-tabs-bar {
+    background: transparent !important;
+}
+.v-tab { text-transform:none !important; letter-spacing: normal !important;}
+
+/* alert */
+body .theme--light .v-alert .v-btn.v-alert__dismissible { position:absolute; top:15px; right:7px; opacity:1 !important; }
+
+/* buttons */
+.v-btn { text-transform:none !important; letter-spacing: normal !important;}
+
+
+/* stepper */
+.v-stepper { box-shadow:none !important; }
+.v-stepper__header { box-shadow:none !important; }
+.v-stepper__step__step .v-icon.v-icon { font-size: 1.95rem!important;}
+.v-stepper__step__step {height: 31px!important; width: 31px!important; min-width:31px!important}
+
+.v-list-group__header__append-icon .v-icon { color: #92929D  !important}
+
+
+/*web proforma satıcı odeme */
+.tableHeader1 { color: #171725 !important; caret-color :#171725 !important; font-size: 15px !important;}
+.v-application .tableHeader2 { color: #354052 !important; caret-color :#354052  !important;}
+
+body .v-application .radioButton { color: #354052 !important; font-size: 14px !important;}
+
+.v-application .blue-grey-payment { color: #7f8fa4!important;font-size: 15px !important;}
+
+/*projeler ödeme planı ekranı checkbox rengi*/
+.dataTableCheckBox  .mdi-checkbox-marked, .mdi-minus-box {
+    color: #00BCD4!important;
+    caret-color :#00BCD4  !important;
+ }
+/*font weigth medium label*/
+body .v-application .font-weight-medium {
+    font-weight: 600!important;
+}
+
+
+/*geciken ödemeler label*/
+.v-application .dark-blue-late-payment { color: #234361!important;}
+/*web yaklaşan label*/
+.v-application .upcomingLabel-payment { color: #66788A !important;}
+
+/*duyurular üst başlık label*/
+.v-application .announcements-slateGray { color: #515158!important;}
+
+/*ana ekran geciken ödeme valert renk*/
+.v-application .webDash-red { background-color: #ED1C24!important;  border-color: #ED1C24!important;}
+
+/*hemen başvur geri butonu rengi*/
+.v-application .requestOfferBackButton { background-color: #90CAF9!important;}
+
+
+/*bize ulaşın butonu rengi*/
+.v-application .contactUsButton { background-color: #ABC9EB!important;}
+
+/*bize ulaşın socialMedia butonu*/
+.v-application .noMinWidth {
+    min-width : 0px!important;
+}
+
+
+/*cardların etrafındaki çerçeve*/
+.greyLighten5 {  background-color: #fafafa!important;  }
+
+/*web sigorta poliçeleri filtre card rengi */
+.cardColor { background-color: #eff6ff!important;border-color: #435a6f!important;}
+
+/*ffdcad web yaklaşan alert color turuncu*/
+.alertColor1 { background-color: #ffdcad!important;border-color: #435a6f!important;}
+
+
+/*f8c1c1 web yaklaşan alert color pembe*/
+.alertColor2 { background-color: #f8c1c1!important;border-color: #435a6f!important;}
+
+
+/*d9e9ff web yaklaşan alert color mavi*/
+.alertColor3 { background-color: #d9e9ff!important;border-color: #435a6f!important;}
+
+/*web yaklaşan tarih*/
+.labelDate { color: #171725 !important; font-size: 14px !important;}
+/*proforma dividerColor */
+.dividerColor { color: #dfe3e9 !important;}
+
+/*web Projeler anasayfa label*/
+.v-application .labelProject { color: #696974!important;}
+
+.v-application .latePayments-gray { color: #767A84!important;}
+
+/*mobil projeler başlık + firma detay alt başlık+ proforma başlık*/
+.v-application .labelName { color: #1e2432 !important; font-size: 16px !important;}
+.v-application .insuranceLabel { color: #686c74 !important; font-size: 11px !important;}
+
+
+/*mobil firma detay */
+.v-application .labelCompany { color: #000000!important;font-size: 14px !important;}
+.v-application .labelDarkishBlue { color: #0539a3!important;font-size: 16px !important;}
+
+.v-application .labelGreyishBrown { color: #4a4a4a!important;font-size: 14px !important; }
+.v-application .labelCharcoalGrey { color: #424854!important;font-size: 14px !important;}
+.v-application .labelSoftBlue { color: #5098f0!important;font-size: 14px !important;}
+ .v-application .labelTwoBlue { color: #0c3ea3!important;font-size: 14px !important;}
+.cardPinkGrey { border-color: #cccccc!important;font-size: 14px !important;}
+
+.prjBtn { color: #14B5D1!important;}
+
+body .v-application .fontsize-8  { font-size:8px !important; }
+body .v-application .fontsize-10  { font-size: 10px !important; }
+body .v-application .fontsize-11  { font-size: 11px !important; }
+body .v-application .fontsize-12  { font-size: 12px !important; }
+body .v-application .fontsize-14  { font-size: 14px !important; }
+body .v-application .fontsize-16  { font-size: 16px !important; }
+body .v-application .fontsize-18  { font-size: 18px !important; }
+body .v-application .fontsize-20  { font-size: 20px !important; }
+body .v-application .fontsize-24  { font-size: 24px !important; }
+body .v-application .fontsize-28  { font-size: 28px !important; }
+body .v-application .fontsize-32  { font-size: 32px !important; }
+body .v-application .fontsize-40  { font-size: 40px !important; }
+body .v-application .fontsize-48  { font-size: 48px !important; }
+
+.v-application .labelDark {color: #1e2432 !important;}
+.v-application .labelSlateGrey { color: #686c74 !important;}
+
+
+/*duyurular kart renk*/
+.v-application .announcementGreen { background-color: #DFF1E0!important;  border-color: #DFF1E0!important;}
+
+/*yaklaşan ödeme renkleri*/
+.v-application .upcomingPaymentRed { background-color: #F71C1C!important;  border-color: #F71C1C!important;}
+.v-application .upcomingPaymentBlue { background-color: #4A90E2!important;  border-color: #4A90E2!important;}
+.v-application .upcomingPaymentOrange { background-color: #F7981C!important;  border-color: #F7981C!important;}
+
+
+/*home icons bg*/
+.v-application .homeIconsBg { background-color: #315db5!important;  border-color: #315db5!important;}
+/*aa*/
+
+.v-sheet.v-card:not(.v-sheet--outlined)
+{
+    -webkit-appearance: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.46)!important
+}
+
+#EdtrComp_4699, #CardPhoneNumber, #CardAddress, #CardMail, #CardRememberedUsers {
+    -webkit-appearance: none;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.20)!important;
+    border: 1px solid #e0e0e0;
+}
+
+#EdtrComp_9322 {
+    -webkit-appearance: none;
+    box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.20)!important;
+}
+
+.v-expansion-panel::before {
+    -webkit-appearance: none;
+    box-shadow: none;
+}
+
+.v-expansion-panel-header {
+    border-radius: 4px;
+}
+
+.theme--light.v-sheet--outlined {
+    -webkit-appearance: none;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.20)!important;
+}
