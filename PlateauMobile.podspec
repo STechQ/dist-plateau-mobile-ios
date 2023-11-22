@@ -9,7 +9,7 @@
  s.platform      = :ios, "12.0"
  s.ios.vendored_frameworks = 'PlateauMobile.xcframework'
  s.swift_version = "5"
- s.source        = { :git => "https://github.com/STechQ/dist-plateau-mobile-ios.git",  :tag => "#{s.version}"  }
+ s.source        = { :git => "https://github.com/STechQ/dist-plateau-mobile-ios.git",  :tag => "v#{s.version}"  }
  s.readme = "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/README.md"
  s.pod_target_xcconfig = { 
  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' 
