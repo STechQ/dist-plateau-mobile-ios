@@ -1578,7 +1578,6 @@ SWIFT_CLASS("_TtC13PlateauMobile6QLabel")
 - (void)onViewWillAppear;
 - (void)onViewDidAppear;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
 @end
 
 

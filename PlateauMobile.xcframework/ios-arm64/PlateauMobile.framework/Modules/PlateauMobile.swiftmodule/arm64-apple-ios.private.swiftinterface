@@ -3802,7 +3802,6 @@ public enum DataType : Swift.String {
   @_Concurrency.MainActor(unsafe) override public func applyStyleUpdates()
   @_Concurrency.MainActor(unsafe) override public func applyUIUpdates()
   @_Concurrency.MainActor(unsafe) public func setLineHeight(lineHeight: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class QVideoCss : PlateauMobile.BaseCss {
