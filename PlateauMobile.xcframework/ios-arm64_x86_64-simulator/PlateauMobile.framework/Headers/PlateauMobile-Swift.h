@@ -401,12 +401,6 @@ SWIFT_CLASS("_TtC13PlateauMobile18AlertViewViewModel")
 
 
 
-SWIFT_CLASS("_TtC13PlateauMobile11BaseRequest")
-@interface BaseRequest : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_CLASS("_TtC13PlateauMobile14BaseStyleProps")
 @interface BaseStyleProps : NSObject
 @property (nonatomic, copy) NSString * _Nonnull paddingTop;
@@ -1362,7 +1356,7 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile25QMNetworkDelegateProtocol_")
 @protocol QMNetworkDelegateProtocol
 @optional
 - (void)sendModelRequestWithQjsonPath:(NSString * _Nonnull)qjsonPath success:(JSValue * _Nonnull)success fail:(JSValue * _Nonnull)fail;
-- (void)sendRequestWithUrl:(NSString * _Nonnull)url method:(NSString * _Nonnull)method success:(JSValue * _Nonnull)success fail:(JSValue * _Nonnull)fail body:(NSDictionary * _Nullable)body headers:(NSDictionary * _Nonnull)headers options:(NSDictionary * _Nonnull)options;
+- (void)sendRequestWithUrl:(NSString * _Nonnull)url method:(NSString * _Nonnull)method success:(JSValue * _Nonnull)success fail:(JSValue * _Nonnull)fail body:(NSDictionary<NSString *, id> * _Nullable)body headers:(NSDictionary<NSString *, id> * _Nonnull)headers options:(NSDictionary<NSString *, id> * _Nonnull)options;
 @end
 
 @class JSContext;
@@ -1405,13 +1399,6 @@ SWIFT_CLASS("_TtC13PlateauMobile20QBBaseViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-@class CLLocationManager;
-
-@interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <CLLocationManagerDelegate>
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
-- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
-@end
-
 
 SWIFT_PROTOCOL("_TtP13PlateauMobile29QPermissionManagementProtocol_")
 @protocol QPermissionManagementProtocol
@@ -1425,10 +1412,16 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile29QPermissionManagementProtocol_")
 - (void)requestRuntimePermissionsWithPermissions:(NSArray<NSString *> * _Nullable)permissions listener:(id <QRuntimePermissionListenerProtocol> _Nonnull)listener;
 @end
 
+@class CLLocationManager;
+
+@interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <CLLocationManagerDelegate>
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
+@end
+
 
 SWIFT_CLASS("_TtC13PlateauMobile15QBConfiguration")
 @interface QBConfiguration : NSObject
-@property (nonatomic, copy) NSString * _Nonnull logLevel;
 @property (nonatomic, copy) NSString * _Nonnull cssUrl;
 @property (nonatomic, copy) NSString * _Nonnull jsonBaseUrl;
 @property (nonatomic, copy) NSString * _Nonnull port;
@@ -1908,7 +1901,6 @@ SWIFT_CLASS("_TtC13PlateauMobile11RippleLayer")
 - (nonnull instancetype)initWithLayer:(id _Nonnull)layer SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
-- (void)animationDidStop:(CAAnimation * _Nonnull)anim finished:(BOOL)flag;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -4379,6 +4371,7 @@ SWIFT_CLASS("_TtC13PlateauMobile19VTextFieldViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile9VTextarea")
 @interface VTextarea : InputBase <UIGestureRecognizerDelegate, UITextViewDelegate>
+- (void)applyUIUpdates;
 - (void)setFonts;
 - (void)applyStyleUpdates;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
@@ -4886,12 +4879,6 @@ SWIFT_CLASS("_TtC13PlateauMobile18AlertViewViewModel")
 
 
 
-SWIFT_CLASS("_TtC13PlateauMobile11BaseRequest")
-@interface BaseRequest : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_CLASS("_TtC13PlateauMobile14BaseStyleProps")
 @interface BaseStyleProps : NSObject
 @property (nonatomic, copy) NSString * _Nonnull paddingTop;
@@ -5847,7 +5834,7 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile25QMNetworkDelegateProtocol_")
 @protocol QMNetworkDelegateProtocol
 @optional
 - (void)sendModelRequestWithQjsonPath:(NSString * _Nonnull)qjsonPath success:(JSValue * _Nonnull)success fail:(JSValue * _Nonnull)fail;
-- (void)sendRequestWithUrl:(NSString * _Nonnull)url method:(NSString * _Nonnull)method success:(JSValue * _Nonnull)success fail:(JSValue * _Nonnull)fail body:(NSDictionary * _Nullable)body headers:(NSDictionary * _Nonnull)headers options:(NSDictionary * _Nonnull)options;
+- (void)sendRequestWithUrl:(NSString * _Nonnull)url method:(NSString * _Nonnull)method success:(JSValue * _Nonnull)success fail:(JSValue * _Nonnull)fail body:(NSDictionary<NSString *, id> * _Nullable)body headers:(NSDictionary<NSString *, id> * _Nonnull)headers options:(NSDictionary<NSString *, id> * _Nonnull)options;
 @end
 
 @class JSContext;
@@ -5890,13 +5877,6 @@ SWIFT_CLASS("_TtC13PlateauMobile20QBBaseViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-@class CLLocationManager;
-
-@interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <CLLocationManagerDelegate>
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
-- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
-@end
-
 
 SWIFT_PROTOCOL("_TtP13PlateauMobile29QPermissionManagementProtocol_")
 @protocol QPermissionManagementProtocol
@@ -5910,10 +5890,16 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile29QPermissionManagementProtocol_")
 - (void)requestRuntimePermissionsWithPermissions:(NSArray<NSString *> * _Nullable)permissions listener:(id <QRuntimePermissionListenerProtocol> _Nonnull)listener;
 @end
 
+@class CLLocationManager;
+
+@interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <CLLocationManagerDelegate>
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
+@end
+
 
 SWIFT_CLASS("_TtC13PlateauMobile15QBConfiguration")
 @interface QBConfiguration : NSObject
-@property (nonatomic, copy) NSString * _Nonnull logLevel;
 @property (nonatomic, copy) NSString * _Nonnull cssUrl;
 @property (nonatomic, copy) NSString * _Nonnull jsonBaseUrl;
 @property (nonatomic, copy) NSString * _Nonnull port;
@@ -6393,7 +6379,6 @@ SWIFT_CLASS("_TtC13PlateauMobile11RippleLayer")
 - (nonnull instancetype)initWithLayer:(id _Nonnull)layer SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
-- (void)animationDidStop:(CAAnimation * _Nonnull)anim finished:(BOOL)flag;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -8864,6 +8849,7 @@ SWIFT_CLASS("_TtC13PlateauMobile19VTextFieldViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile9VTextarea")
 @interface VTextarea : InputBase <UIGestureRecognizerDelegate, UITextViewDelegate>
+- (void)applyUIUpdates;
 - (void)setFonts;
 - (void)applyStyleUpdates;
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;

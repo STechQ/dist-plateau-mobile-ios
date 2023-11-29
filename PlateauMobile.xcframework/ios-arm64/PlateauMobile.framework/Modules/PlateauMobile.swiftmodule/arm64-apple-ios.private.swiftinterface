@@ -4,7 +4,6 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
-import Alamofire
 import CommonCrypto
 import CoreGraphics
 import CoreLocation
@@ -245,7 +244,7 @@ public enum DataTableDataType : Swift.String {
   public func clientLogRequest(level: Swift.String, items: [Any], source: Swift.String)
   public func debugModeSet(debugMode: Swift.Bool)
   public func getQJson(path: Swift.String, success: JavaScriptCore.JSValue)
-  public func getRequestRespose(path: Swift.String, method: Swift.String, body: [Swift.AnyHashable : Any]?, headers: [Swift.AnyHashable : Any]?, responseCb: JavaScriptCore.JSValue, failCb: JavaScriptCore.JSValue)
+  public func getRequestRespose(path: Swift.String, method: Swift.String, body: [Swift.String : Any]?, headers: [Swift.AnyHashable : Any]?, responseCb: JavaScriptCore.JSValue, failCb: JavaScriptCore.JSValue)
   public func dataToJsonDict(jsonData: Foundation.Data) -> [Swift.String : Swift.String]
   public func getSettingsResponse(path: Swift.String, responseCb: @escaping (Any) -> Swift.Void, failCb: @escaping () -> Swift.Void)
   public func getResourceResponse(path: Swift.String, responseCb: @escaping (Any) -> Swift.Void, failCb: @escaping () -> Swift.Void)
@@ -607,7 +606,6 @@ extension PlateauMobile.BaseComponent {
   @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
   public func superLayerDidResize()
-  @objc public func animationDidStop(_ anim: QuartzCore.CAAnimation, finished flag: Swift.Bool)
   public func startEffects(atLocation touchLocation: CoreFoundation.CGPoint)
   public func stopEffects()
   public func stopEffectsImmediately()
@@ -880,6 +878,16 @@ extension PlateauMobile.DxRowDragging {
   @_Concurrency.MainActor(unsafe) public func onDragEnd(gesture: UIKit.UIPanGestureRecognizer)
   @_Concurrency.MainActor(unsafe) public func showIcons() -> Swift.Bool
 }
+public enum LogLevel {
+  case debugUI
+  case release
+  case debugAll
+  public static func == (a: PlateauMobile.LogLevel, b: PlateauMobile.LogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @objc @_inheritsConvenienceInitializers public class QBLogger : ObjectiveC.NSObject {
   public class func log(_ message: Swift.String, source: Swift.String = "native", level: Swift.String = "debug")
   public class func log(message: [Any], source: Swift.String, level: Swift.String)
@@ -905,7 +913,7 @@ public class QuickDelegate : PlateauMobile.QMQuickProtocol {
 public class QuickNetworkDelegate : PlateauMobile.QMNetworkDelegateProtocol {
   public init()
   @objc public func sendModelRequest(qjsonPath: Swift.String, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue)
-  @objc public func sendRequest(url: Swift.String, method: Swift.String, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue, body: [Swift.AnyHashable : Any]?, headers: [Swift.AnyHashable : Any], options: [Swift.AnyHashable : Any])
+  @objc public func sendRequest(url: Swift.String, method: Swift.String, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue, body: [Swift.String : Any]?, headers: [Swift.String : Any], options: [Swift.String : Any])
   @objc deinit
 }
 public class QuickBridge {
@@ -917,6 +925,7 @@ public class QuickBridge {
   public static var quickMobileDelegate: PlateauMobile.QMScreenDelegateProtocol?
   public static let studioPublishId: Swift.String
   public static let studioAppUrl: Swift.String
+  public var userLocation: PlateauMobile.BridgeHelper.ILocationPosition
   public func resolveRequest(json: Any, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue, error: Any?)
   public func setComponentProperty(obj: PlateauMobile.BaseComponent, propName: JavaScriptCore.JSValue, value: JavaScriptCore.JSValue, type: JavaScriptCore.JSValue)
   public func getProperty(obj: JavaScriptCore.JSValue, prop: JavaScriptCore.JSValue, pageId: JavaScriptCore.JSValue) -> Any
@@ -1006,7 +1015,7 @@ extension PlateauMobile.DxColumnFixing {
   @_Concurrency.MainActor(unsafe) public func initializeStyle()
 }
 @objc @_inheritsConvenienceInitializers @objcMembers open class QBConfiguration : ObjectiveC.NSObject {
-  @objc public var logLevel: Swift.String
+  public var logLevel: PlateauMobile.LogLevel
   @objc public var cssUrl: Swift.String
   @objc public var jsonBaseUrl: Swift.String
   @objc public var port: Swift.String
@@ -1045,7 +1054,7 @@ extension PlateauMobile.DxColumnFixing {
 }
 @objc public protocol QMNetworkDelegateProtocol {
   @objc optional func sendModelRequest(qjsonPath: Swift.String, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue)
-  @objc optional func sendRequest(url: Swift.String, method: Swift.String, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue, body: [Swift.AnyHashable : Any]?, headers: [Swift.AnyHashable : Any], options: [Swift.AnyHashable : Any])
+  @objc optional func sendRequest(url: Swift.String, method: Swift.String, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue, body: [Swift.String : Any]?, headers: [Swift.String : Any], options: [Swift.String : Any])
 }
 @objc public protocol QMQuickProtocol {
   @objc func setQuickSettings()
@@ -1360,6 +1369,15 @@ public class BridgeHelper {
   public static func setRegion(regionName: Swift.String)
   public static func getCurrentRegion() -> Swift.String
   public static func getFormattingDefinitonByCurrentRegion() -> Foundation.NSDictionary
+  public struct ILocationPosition {
+  }
+  public struct ILocationPositionSuccess {
+  }
+  public struct ILocationPositionError {
+  }
+  public struct ILocationCoordinates {
+  }
+  public static func getUserLocation(successCallBack: JavaScriptCore.JSValue, errorCallBack: JavaScriptCore.JSValue, context: JavaScriptCore.JSContext) -> PlateauMobile.BridgeHelper.ILocationPosition
   public static func copyToClipboard(value: Swift.String)
   public static func log_perf(m: Swift.String)
   public static func getDeepLinkParameters() -> [Swift.String : Swift.String]
@@ -2488,23 +2506,19 @@ extension PlateauMobile.DxDataGrid {
   @_Concurrency.MainActor(unsafe) public func verticalSeperator() -> UIKit.UIView
   @_Concurrency.MainActor(unsafe) public func horizontalSeperator() -> UIKit.UIView
 }
-public protocol QBRequestProtocol {
-  var uri: Swift.String { get set }
-  var parameters: Foundation.NSDictionary { get set }
-  var body: Foundation.NSDictionary { get set }
-  var randomNumber: Swift.String { get set }
-}
-@objc @_inheritsConvenienceInitializers public class BaseRequest : ObjectiveC.NSObject, PlateauMobile.QBRequestProtocol {
-  public var uri: Swift.String
-  public var parameters: Foundation.NSDictionary
-  public var body: Foundation.NSDictionary
-  public var randomNumber: Swift.String
-  @objc override dynamic public init()
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class QBNetworkManager : ObjectiveC.NSObject {
   public class func shared() -> PlateauMobile.QBNetworkManager
-  public func sendRequest(request: PlateauMobile.QBRequestProtocol!, parameters: Alamofire.Parameters, method: Alamofire.HTTPMethod, transformReponse: Swift.Bool, headers: Alamofire.HTTPHeaders = [], completion: @escaping (_ json: Any?, _ error: Foundation.NSError?) -> Swift.Void)
+  public enum Error : Swift.Error {
+    case connectivity
+    case invalidData
+    case errorStatus
+    public static func == (a: PlateauMobile.QBNetworkManager.Error, b: PlateauMobile.QBNetworkManager.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func sendRequestFrom(url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any], method: PlateauMobile.HTTPMethodType, transformReponse: Swift.Bool, headers: PlateauMobile.HTTPHeaders, completion: @escaping (_ json: Any?, _ error: Foundation.NSError?) -> Swift.Void)
   public func logJson(dict: Foundation.NSDictionary)
   @objc deinit
 }
@@ -3493,6 +3507,81 @@ extension PlateauMobile.QDocumentViewer : UIKit.UIScrollViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
 }
+public enum HTTPClientResult {
+  case success(Foundation.Data, Foundation.HTTPURLResponse)
+  case failure(Swift.Error)
+}
+public enum HTTPMethodType : Swift.String {
+  case get
+  case put
+  case post
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct HTTPHeaders {
+  public init(_ dictionary: [Swift.String : Swift.String])
+  public mutating func add(name: Swift.String, value: Swift.String)
+  public mutating func add(_ header: PlateauMobile.HTTPHeader)
+  public mutating func update(name: Swift.String, value: Swift.String)
+  public mutating func update(_ header: PlateauMobile.HTTPHeader)
+  public mutating func remove(name: Swift.String)
+  public func value(for name: Swift.String) -> Swift.String?
+  public subscript(name: Swift.String) -> Swift.String? {
+    get
+    set
+  }
+  public var dictionary: [Swift.String : Swift.String] {
+    get
+  }
+}
+extension PlateauMobile.HTTPHeaders : Swift.Collection {
+  public var startIndex: Swift.Int {
+    get
+  }
+  public var endIndex: Swift.Int {
+    get
+  }
+  public subscript(position: Swift.Int) -> PlateauMobile.HTTPHeader {
+    get
+  }
+  public func index(after i: Swift.Int) -> Swift.Int
+  public typealias Element = PlateauMobile.HTTPHeader
+  public typealias Index = Swift.Int
+  public typealias Indices = Swift.DefaultIndices<PlateauMobile.HTTPHeaders>
+  public typealias Iterator = Swift.IndexingIterator<PlateauMobile.HTTPHeaders>
+  public typealias SubSequence = Swift.Slice<PlateauMobile.HTTPHeaders>
+}
+public struct HTTPHeader : Swift.Hashable {
+  public let name: Swift.String
+  public let value: Swift.String
+  public init(name: Swift.String, value: Swift.String)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: PlateauMobile.HTTPHeader, b: PlateauMobile.HTTPHeader) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension PlateauMobile.HTTPHeaders : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension PlateauMobile.HTTPHeader : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol HTTPClient {
+  func request(to url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any?], method: PlateauMobile.HTTPMethodType, headers: PlateauMobile.HTTPHeaders, completion: @escaping (PlateauMobile.HTTPClientResult) -> Swift.Void)
+}
+public class URLSessionHTTPClient : PlateauMobile.HTTPClient {
+  public init(session: Foundation.URLSession = .shared)
+  public func request(to url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any?], method: PlateauMobile.HTTPMethodType, headers: PlateauMobile.HTTPHeaders, completion: @escaping (PlateauMobile.HTTPClientResult) -> Swift.Void)
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @objcMembers public class VFooterCss : PlateauMobile.BaseCss {
   @objc required dynamic public init()
   @objc deinit
@@ -4180,6 +4269,7 @@ public struct OneSizedDisplayQueue<T> : PlateauMobile.Queue {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class VTextarea : PlateauMobile.InputBase, UIKit.UIGestureRecognizerDelegate, UIKit.UITextViewDelegate {
+  @objc @_Concurrency.MainActor(unsafe) override public func applyUIUpdates()
   @_Concurrency.MainActor(unsafe) @objc override public func setFonts()
   @_Concurrency.MainActor(unsafe) @objc override public func applyStyleUpdates()
   @objc deinit
@@ -4793,6 +4883,8 @@ extension PlateauMobile.QPermissionType : Swift.Equatable {}
 extension PlateauMobile.QPermissionType : Swift.Hashable {}
 extension PlateauMobile.QPermissionType : Swift.RawRepresentable {}
 extension PlateauMobile.Ghost : JavaScriptCore.JSExport {}
+extension PlateauMobile.LogLevel : Swift.Equatable {}
+extension PlateauMobile.LogLevel : Swift.Hashable {}
 extension PlateauMobile.TransferObject : JavaScriptCore.JSExport {}
 extension PlateauMobile.Icon : Swift.Equatable {}
 extension PlateauMobile.Icon : Swift.Hashable {}
@@ -4844,12 +4936,17 @@ extension PlateauMobile.CC.CRC.Mode : Swift.RawRepresentable {}
 extension PlateauMobile.CC.KeyDerivation.PRFAlg : Swift.Equatable {}
 extension PlateauMobile.CC.KeyDerivation.PRFAlg : Swift.Hashable {}
 extension PlateauMobile.CC.KeyDerivation.PRFAlg : Swift.RawRepresentable {}
+extension PlateauMobile.QBNetworkManager.Error : Swift.Equatable {}
+extension PlateauMobile.QBNetworkManager.Error : Swift.Hashable {}
 extension PlateauMobile.TextInputsVM.KeybordType : Swift.Equatable {}
 extension PlateauMobile.TextInputsVM.KeybordType : Swift.Hashable {}
 extension PlateauMobile.TextInputsVM.KeybordType : Swift.RawRepresentable {}
 extension PlateauMobile.VBtn.ButtonType : Swift.Equatable {}
 extension PlateauMobile.VBtn.ButtonType : Swift.Hashable {}
 extension PlateauMobile.VBtn.ButtonType : Swift.RawRepresentable {}
+extension PlateauMobile.HTTPMethodType : Swift.Equatable {}
+extension PlateauMobile.HTTPMethodType : Swift.Hashable {}
+extension PlateauMobile.HTTPMethodType : Swift.RawRepresentable {}
 extension PlateauMobile.OperationType : Swift.Equatable {}
 extension PlateauMobile.OperationType : Swift.Hashable {}
 extension PlateauMobile.OperationType : Swift.RawRepresentable {}

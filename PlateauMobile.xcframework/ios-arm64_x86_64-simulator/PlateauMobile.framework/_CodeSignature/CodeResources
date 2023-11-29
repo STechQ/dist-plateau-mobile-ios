@@ -674,7 +674,7 @@
 		</data>
 		<key>Headers/PlateauMobile-Swift.h</key>
 		<data>
-		GOvdNo4dNuEJC3zD3yzaCZueELs=
+		zLJBukuNCd1wHAwzD/oU9YL32Vc=
 		</data>
 		<key>Headers/QuickBridge.h</key>
 		<data>
@@ -682,47 +682,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		UIxs3Yv6sk2bdRuGZAYMHKc0RDY=
+		aImWVYMDdosEByY4CtO+YSWr1+Y=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		+eIaNcWxVGT+ALUSO4sQWzAMH6s=
+		T2RGhPJ+8wNXYsJEvP8+jeZobHk=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		R70tOK3juDo8TFBKTidjm2fqHeU=
+		EQO0QwOiSfTugSLfaZ5NWrroDGc=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		C52pOqo7CXnBNkPGFceGkQ7Estc=
+		s3ld1oO3E6z49uoxYAmL5HIQYek=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		R70tOK3juDo8TFBKTidjm2fqHeU=
+		EQO0QwOiSfTugSLfaZ5NWrroDGc=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5AX4Ayl78UNrJ8sg1Jfc1zXOiw4=
+		eluRWmp0bsIabBA3pd8m7GuJzNc=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		+eIaNcWxVGT+ALUSO4sQWzAMH6s=
+		T2RGhPJ+8wNXYsJEvP8+jeZobHk=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		YWa+H8KFco3FfY3tTVqpVi9DDEE=
+		pUGY4cPGlyAqXMp/z5ahedq6Fns=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		kePOvnGCKq13YRssKpuvIKVxinM=
+		znFrK7YyIzcS0YqeV691KKQJhbE=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		YWa+H8KFco3FfY3tTVqpVi9DDEE=
+		pUGY4cPGlyAqXMp/z5ahedq6Fns=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3qtwZjpqfrnveKJfStk/60ZxO50=
+		3mNykZ7lXbhJOTKXSr9/WfPMe9o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -1940,7 +1940,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			flwvAA+JGwPf9pSMW53EYh9O8tn3IZfIwWGV1HzbNfc=
+			vXgz4kwUtlxOREH1ARJpevuVV/mv0tlXNYhErUpsGiA=
 			</data>
 		</dict>
 		<key>Headers/QuickBridge.h</key>
@@ -1954,70 +1954,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R8QXCW70Uzv9aUCoT4UsoEqUGnji4moZlitKpwJfVPA=
+			snmwoFJrBwYmE8Llt3CVFXmAWpYmbsE2KNPtpvdig2I=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HoKwqL/CfkDRAm35k/MWp75FonIT76HejMJ84J1WNKk=
+			xd7ZWD/YtJuOJhQaDBl5ME+XnenHm5YFtGa0nlRDXhI=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KD7T67DaDww66bxCxysF0zkHaVAoW90R2xHtchnLNZQ=
+			DPiegBtQowq/UIYOut3VkcjFUAu56KsPnw4DFliQ4SU=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HoKwqL/CfkDRAm35k/MWp75FonIT76HejMJ84J1WNKk=
+			xd7ZWD/YtJuOJhQaDBl5ME+XnenHm5YFtGa0nlRDXhI=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w/4V0L0G9adCAaXtOnoGhfZcm6AHHRcAXf4/BbkUVL4=
+			2oBQTKxxPCOjAc0zqfwPsNf9XAHPwh6GXZdW6jQIGCI=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			R8QXCW70Uzv9aUCoT4UsoEqUGnji4moZlitKpwJfVPA=
+			snmwoFJrBwYmE8Llt3CVFXmAWpYmbsE2KNPtpvdig2I=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g/1sJN5IwbIp1jN3d4e4PgTvWI7WQM6zCBARl2OYaIY=
+			k5CAAhqMj2NkVqRd7IaF+bDSD9NnYky9T913Pxr2Q+0=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pLQnT6B+GENWwHlQvFcU5ubxNN0y7w7dfVfN6HTV08s=
+			ISJ6meCnM076G584/Cjle8HRWkvTcrVWquZgYZzddio=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g/1sJN5IwbIp1jN3d4e4PgTvWI7WQM6zCBARl2OYaIY=
+			k5CAAhqMj2NkVqRd7IaF+bDSD9NnYky9T913Pxr2Q+0=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s8+Pec9Dg/lSw1VzTsyg3CQU58wW58FEMP0db8iDGM8=
+			gf8+ZfCFhvaOJ3az+lSdDb0LZKrhv30X+I9XrCPqpXs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
