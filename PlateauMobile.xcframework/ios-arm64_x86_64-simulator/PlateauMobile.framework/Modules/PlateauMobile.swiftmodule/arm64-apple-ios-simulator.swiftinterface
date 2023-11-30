@@ -2518,7 +2518,7 @@ extension PlateauMobile.DxDataGrid {
       get
     }
   }
-  public func sendRequestFrom(url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any], method: PlateauMobile.HTTPMethodType, transformReponse: Swift.Bool, headers: PlateauMobile.HTTPHeaders, completion: @escaping (_ json: Any?, _ error: Foundation.NSError?) -> Swift.Void)
+  public func sendRequestFrom(url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any], method: PlateauMobile.HTTPMethodType, transformReponse: Swift.Bool, headers: PlateauMobile.QHTTPHeaders, completion: @escaping (_ json: Any?, _ error: Foundation.NSError?) -> Swift.Void)
   public func logJson(dict: Foundation.NSDictionary)
   @objc deinit
 }
@@ -3521,12 +3521,12 @@ public enum HTTPMethodType : Swift.String {
     get
   }
 }
-public struct HTTPHeaders {
+public struct QHTTPHeaders {
   public init(_ dictionary: [Swift.String : Swift.String])
   public mutating func add(name: Swift.String, value: Swift.String)
-  public mutating func add(_ header: PlateauMobile.HTTPHeader)
+  public mutating func add(_ header: PlateauMobile.QHTTPHeader)
   public mutating func update(name: Swift.String, value: Swift.String)
-  public mutating func update(_ header: PlateauMobile.HTTPHeader)
+  public mutating func update(_ header: PlateauMobile.QHTTPHeader)
   public mutating func remove(name: Swift.String)
   public func value(for name: Swift.String) -> Swift.String?
   public subscript(name: Swift.String) -> Swift.String? {
@@ -3537,49 +3537,49 @@ public struct HTTPHeaders {
     get
   }
 }
-extension PlateauMobile.HTTPHeaders : Swift.Collection {
+extension PlateauMobile.QHTTPHeaders : Swift.Collection {
   public var startIndex: Swift.Int {
     get
   }
   public var endIndex: Swift.Int {
     get
   }
-  public subscript(position: Swift.Int) -> PlateauMobile.HTTPHeader {
+  public subscript(position: Swift.Int) -> PlateauMobile.QHTTPHeader {
     get
   }
   public func index(after i: Swift.Int) -> Swift.Int
-  public typealias Element = PlateauMobile.HTTPHeader
+  public typealias Element = PlateauMobile.QHTTPHeader
   public typealias Index = Swift.Int
-  public typealias Indices = Swift.DefaultIndices<PlateauMobile.HTTPHeaders>
-  public typealias Iterator = Swift.IndexingIterator<PlateauMobile.HTTPHeaders>
-  public typealias SubSequence = Swift.Slice<PlateauMobile.HTTPHeaders>
+  public typealias Indices = Swift.DefaultIndices<PlateauMobile.QHTTPHeaders>
+  public typealias Iterator = Swift.IndexingIterator<PlateauMobile.QHTTPHeaders>
+  public typealias SubSequence = Swift.Slice<PlateauMobile.QHTTPHeaders>
 }
-public struct HTTPHeader : Swift.Hashable {
+public struct QHTTPHeader : Swift.Hashable {
   public let name: Swift.String
   public let value: Swift.String
   public init(name: Swift.String, value: Swift.String)
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: PlateauMobile.HTTPHeader, b: PlateauMobile.HTTPHeader) -> Swift.Bool
+  public static func == (a: PlateauMobile.QHTTPHeader, b: PlateauMobile.QHTTPHeader) -> Swift.Bool
   public var hashValue: Swift.Int {
     get
   }
 }
-extension PlateauMobile.HTTPHeaders : Swift.CustomStringConvertible {
+extension PlateauMobile.QHTTPHeaders : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
 }
-extension PlateauMobile.HTTPHeader : Swift.CustomStringConvertible {
+extension PlateauMobile.QHTTPHeader : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
 }
 public protocol HTTPClient {
-  func request(to url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any?], method: PlateauMobile.HTTPMethodType, headers: PlateauMobile.HTTPHeaders, completion: @escaping (PlateauMobile.HTTPClientResult) -> Swift.Void)
+  func request(to url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any?], method: PlateauMobile.HTTPMethodType, headers: PlateauMobile.QHTTPHeaders, completion: @escaping (PlateauMobile.HTTPClientResult) -> Swift.Void)
 }
 public class URLSessionHTTPClient : PlateauMobile.HTTPClient {
   public init(session: Foundation.URLSession = .shared)
-  public func request(to url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any?], method: PlateauMobile.HTTPMethodType, headers: PlateauMobile.HTTPHeaders, completion: @escaping (PlateauMobile.HTTPClientResult) -> Swift.Void)
+  public func request(to url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any?], method: PlateauMobile.HTTPMethodType, headers: PlateauMobile.QHTTPHeaders, completion: @escaping (PlateauMobile.HTTPClientResult) -> Swift.Void)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class VFooterCss : PlateauMobile.BaseCss {
