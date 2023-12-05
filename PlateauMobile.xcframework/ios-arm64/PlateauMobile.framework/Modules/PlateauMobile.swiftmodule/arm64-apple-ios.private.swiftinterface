@@ -104,8 +104,6 @@ extension PlateauMobile.VAppBar {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class VInlineDatepicker : PlateauMobile.InputBase {
-  @_Concurrency.MainActor(unsafe) @objc override public func applyBackgroundColorForStyles()
-  @_Concurrency.MainActor(unsafe) @objc override public func setShadows()
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init(frame: CoreFoundation.CGRect)
   @objc deinit
@@ -547,6 +545,7 @@ extension PlateauMobile.BaseComponent {
   @objc public var borderSize: Swift.String
   @objc public var activeBorderColor: Swift.String
   @objc public var cellBackgroundColor: Swift.String
+  @objc public var outlined: Swift.String
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class InputBaseViewModel : PlateauMobile.BaseViewModel {
@@ -556,6 +555,7 @@ extension PlateauMobile.BaseComponent {
 }
 @objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) public class InputBase : PlateauMobile.BaseComponent, PlateauMobile.QMComponent, UIKit.UITextFieldDelegate {
   @objc @_Concurrency.MainActor(unsafe) public var inputLabel: UIKit.UILabel
+  @objc @_Concurrency.MainActor(unsafe) final public let inputLabelBackgroundView: UIKit.UIView
   @objc @_Concurrency.MainActor(unsafe) override public func applyBackgroundColorForStyles()
   @objc @_Concurrency.MainActor(unsafe) override public func setShadows()
   @objc @_Concurrency.MainActor(unsafe) override public func setCorners()
@@ -1240,7 +1240,7 @@ extension PlateauMobile.DxFilterRow {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func resetFilters()
 }
 public enum Icon : Swift.String {
-  case checkSelected, checkUnSelected, downArrow, kapat, prev, myIcon, off_icon, on_icon, mdi_chevron_right, mdi_chevron_left, mdi_close, mdi_delete, mdi_email, mdi_eye, mdi_eye_off, mdi_phone, next, temp, user, radioOff, radioOn, edit, mdi_check, mdi_check_circle, circle_medium, mdi_calendar, mdi_radiobox_blank, mdi_radiobox_marked, mdi_paper_clip, mdi_clock_outline, mdi_check_bold, mdi_share_variant, mdi_clock_time_eight_outline, mdi_record, mdi_record_circle, mdi_magnify, mdi_chevron_down, mdi_chevron_up, mdi_navigation, mdi_history, mdi_heart, mdi_map_marker, mdi_calendar_range_outline, mdi_alert_circle, mdi_plus_outline, mdi_information, mdi_minus, mdi_alert, mdi_logout, mdi_file_document_outline, mdi_tray_arrow_down, mdi_file_check_outline, mdi_printer_outline, mdi_checkbox_marked_circle_outline, mdi_phone_settings, mdi_home_city_outline, mdi_account_circle_outline, mdi_lock_outline, mdi_tray_arrow_up
+  case checkSelected, checkUnSelected, downArrow, kapat, prev, myIcon, off_icon, on_icon, mdi_chevron_right, mdi_chevron_left, mdi_close, mdi_delete, mdi_email, mdi_eye, mdi_eye_off, mdi_phone, next, temp, user, radioOff, radioOn, edit, mdi_check, mdi_check_circle, circle_medium, mdi_calendar, mdi_radiobox_blank, mdi_radiobox_marked, mdi_paper_clip, mdi_clock_outline, mdi_check_bold, mdi_share_variant, mdi_clock_time_eight_outline, mdi_record, mdi_record_circle, mdi_magnify, mdi_chevron_down, mdi_chevron_up, mdi_navigation, mdi_history, mdi_heart, mdi_map_marker, mdi_calendar_range_outline, mdi_alert_circle, mdi_plus_outline, mdi_information, mdi_minus, mdi_alert, mdi_logout, mdi_file_document_outline, mdi_tray_arrow_down, mdi_file_check_outline, mdi_printer_outline, mdi_checkbox_marked_circle_outline, mdi_phone_settings, mdi_home_city_outline, mdi_account_circle_outline, mdi_lock_outline, mdi_tray_arrow_up, mdi_format_list_bulleted
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -1746,7 +1746,7 @@ extension PlateauMobile.CircularLayer : QuartzCore.CAAnimationDelegate {
   @_Concurrency.MainActor(unsafe) @objc override public func applyBackgroundColorForStyles()
   @_Concurrency.MainActor(unsafe) @objc override public func setFonts()
   @_Concurrency.MainActor(unsafe) @objc override public func setShadows()
-  @_Concurrency.MainActor(unsafe) @objc override public func setBorders()
+  @_Concurrency.MainActor(unsafe) @objc override public func outlineViewMask()
   @_Concurrency.MainActor(unsafe) @objc override public func setCorners()
   @objc @_Concurrency.MainActor(unsafe) public func clicked(_ sender: UIKit.UITapGestureRecognizer)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -2962,9 +2962,6 @@ extension PlateauMobile.VBadge {
   @_Concurrency.MainActor(unsafe) @objc override public func applyStyleUpdates()
   @_Concurrency.MainActor(unsafe) @objc override public func applyBackgroundColorForStyles()
   @_Concurrency.MainActor(unsafe) @objc override public func onViewDidAppear()
-  @_Concurrency.MainActor(unsafe) @objc override public func setShadows()
-  @_Concurrency.MainActor(unsafe) @objc override public func setCorners()
-  @_Concurrency.MainActor(unsafe) @objc override public func setBorders()
   @objc @_Concurrency.MainActor(unsafe) public func setStyleFont()
   @objc @_Concurrency.MainActor(unsafe) public func clicked(_ sender: UIKit.UITapGestureRecognizer)
   @_Concurrency.MainActor(unsafe) @objc override public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
@@ -3578,7 +3575,7 @@ public protocol HTTPClient {
   func request(to url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any?], method: PlateauMobile.HTTPMethodType, headers: PlateauMobile.QHTTPHeaders, completion: @escaping (PlateauMobile.HTTPClientResult) -> Swift.Void)
 }
 public class URLSessionHTTPClient : PlateauMobile.HTTPClient {
-  public init(session: Foundation.URLSession = .shared)
+  public init(session: Foundation.URLSession)
   public func request(to url: Swift.String, parameters: [Swift.String : Swift.String], body: [Swift.String : Any?], method: PlateauMobile.HTTPMethodType, headers: PlateauMobile.QHTTPHeaders, completion: @escaping (PlateauMobile.HTTPClientResult) -> Swift.Void)
   @objc deinit
 }

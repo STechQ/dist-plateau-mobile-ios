@@ -1093,6 +1093,7 @@ SWIFT_CLASS("_TtC13PlateauMobile14GhostViewModel")
 SWIFT_CLASS("_TtC13PlateauMobile9InputBase")
 @interface InputBase : BaseComponent <UITextFieldDelegate>
 @property (nonatomic, strong) UILabel * _Nonnull inputLabel;
+@property (nonatomic, readonly, strong) UIView * _Nonnull inputLabelBackgroundView;
 - (void)applyBackgroundColorForStyles;
 - (void)setShadows;
 - (void)setCorners;
@@ -1153,6 +1154,7 @@ SWIFT_CLASS("_TtC13PlateauMobile19InputBaseStyleProps")
 @property (nonatomic, copy) NSString * _Nonnull borderSize;
 @property (nonatomic, copy) NSString * _Nonnull activeBorderColor;
 @property (nonatomic, copy) NSString * _Nonnull cellBackgroundColor;
+@property (nonatomic, copy) NSString * _Nonnull outlined;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithStyles:(NSDictionary<NSString *, id> * _Nonnull)styles SWIFT_UNAVAILABLE;
@@ -2126,9 +2128,6 @@ SWIFT_CLASS("_TtC13PlateauMobile13VAutocomplete")
 - (void)applyStyleUpdates;
 - (void)applyBackgroundColorForStyles;
 - (void)onViewDidAppear;
-- (void)setShadows;
-- (void)setCorners;
-- (void)setBorders;
 - (void)setStyleFont;
 - (void)clicked:(UITapGestureRecognizer * _Nonnull)sender;
 - (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
@@ -3138,8 +3137,6 @@ SWIFT_CLASS("_TtC13PlateauMobile13VImgViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile17VInlineDatepicker")
 @interface VInlineDatepicker : InputBase
-- (void)applyBackgroundColorForStyles;
-- (void)setShadows;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -3687,7 +3684,7 @@ SWIFT_CLASS("_TtC13PlateauMobile7VSelect")
 - (void)applyBackgroundColorForStyles;
 - (void)setFonts;
 - (void)setShadows;
-- (void)setBorders;
+- (void)outlineViewMask;
 - (void)setCorners;
 - (void)clicked:(UITapGestureRecognizer * _Nonnull)sender;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -5571,6 +5568,7 @@ SWIFT_CLASS("_TtC13PlateauMobile14GhostViewModel")
 SWIFT_CLASS("_TtC13PlateauMobile9InputBase")
 @interface InputBase : BaseComponent <UITextFieldDelegate>
 @property (nonatomic, strong) UILabel * _Nonnull inputLabel;
+@property (nonatomic, readonly, strong) UIView * _Nonnull inputLabelBackgroundView;
 - (void)applyBackgroundColorForStyles;
 - (void)setShadows;
 - (void)setCorners;
@@ -5631,6 +5629,7 @@ SWIFT_CLASS("_TtC13PlateauMobile19InputBaseStyleProps")
 @property (nonatomic, copy) NSString * _Nonnull borderSize;
 @property (nonatomic, copy) NSString * _Nonnull activeBorderColor;
 @property (nonatomic, copy) NSString * _Nonnull cellBackgroundColor;
+@property (nonatomic, copy) NSString * _Nonnull outlined;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithStyles:(NSDictionary<NSString *, id> * _Nonnull)styles SWIFT_UNAVAILABLE;
@@ -6604,9 +6603,6 @@ SWIFT_CLASS("_TtC13PlateauMobile13VAutocomplete")
 - (void)applyStyleUpdates;
 - (void)applyBackgroundColorForStyles;
 - (void)onViewDidAppear;
-- (void)setShadows;
-- (void)setCorners;
-- (void)setBorders;
 - (void)setStyleFont;
 - (void)clicked:(UITapGestureRecognizer * _Nonnull)sender;
 - (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
@@ -7616,8 +7612,6 @@ SWIFT_CLASS("_TtC13PlateauMobile13VImgViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile17VInlineDatepicker")
 @interface VInlineDatepicker : InputBase
-- (void)applyBackgroundColorForStyles;
-- (void)setShadows;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -8165,7 +8159,7 @@ SWIFT_CLASS("_TtC13PlateauMobile7VSelect")
 - (void)applyBackgroundColorForStyles;
 - (void)setFonts;
 - (void)setShadows;
-- (void)setBorders;
+- (void)outlineViewMask;
 - (void)setCorners;
 - (void)clicked:(UITapGestureRecognizer * _Nonnull)sender;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
