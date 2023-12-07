@@ -185,6 +185,8 @@ public struct TextInputsConstant {
     get
   }
   @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override public func resizeIfNeeded()
+  @_Concurrency.MainActor(unsafe) public func resizeContentView() -> Swift.Int
   @_Concurrency.MainActor(unsafe) @objc override public func onViewDidAppear()
   @_Concurrency.MainActor(unsafe) @objc override public func onViewWillAppear()
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -283,6 +285,7 @@ public protocol QMComponent {
   func onViewWillAppear()
   func willLayoutApply()
   func resizeSelf()
+  func resizeIfNeeded()
   func onViewDidAppear()
   func setupScopedSlotUI()
   func setupScopedSlots()
@@ -342,6 +345,7 @@ extension PlateauMobile.QMComponent {
   @objc @_Concurrency.MainActor(unsafe) open func setupScopedSlotUI()
   @objc @_Concurrency.MainActor(unsafe) open func onPostRender()
   @objc @_Concurrency.MainActor(unsafe) open func onViewDidAppear()
+  @objc @_Concurrency.MainActor(unsafe) open func resizeIfNeeded()
   @objc @_Concurrency.MainActor(unsafe) open func resizeSelf()
   @objc @_Concurrency.MainActor(unsafe) open func willLayoutApply()
   @objc @_Concurrency.MainActor(unsafe) open func onViewWillAppear()

@@ -286,6 +286,7 @@ SWIFT_CLASS("_TtC13PlateauMobile13BaseComponent")
 - (void)setupScopedSlotUI;
 - (void)onPostRender;
 - (void)onViewDidAppear;
+- (void)resizeIfNeeded;
 - (void)resizeSelf;
 - (void)willLayoutApply;
 - (void)onViewWillAppear;
@@ -3751,6 +3752,7 @@ SWIFT_CLASS("_TtC13PlateauMobile15VSheetViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile11VSlideGroup")
 @interface VSlideGroup : BaseComponent <UIScrollViewDelegate>
+- (void)resizeIfNeeded;
 - (void)onViewDidAppear;
 - (void)onViewWillAppear;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -4761,6 +4763,7 @@ SWIFT_CLASS("_TtC13PlateauMobile13BaseComponent")
 - (void)setupScopedSlotUI;
 - (void)onPostRender;
 - (void)onViewDidAppear;
+- (void)resizeIfNeeded;
 - (void)resizeSelf;
 - (void)willLayoutApply;
 - (void)onViewWillAppear;
@@ -8226,6 +8229,7 @@ SWIFT_CLASS("_TtC13PlateauMobile15VSheetViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile11VSlideGroup")
 @interface VSlideGroup : BaseComponent <UIScrollViewDelegate>
+- (void)resizeIfNeeded;
 - (void)onViewDidAppear;
 - (void)onViewWillAppear;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
