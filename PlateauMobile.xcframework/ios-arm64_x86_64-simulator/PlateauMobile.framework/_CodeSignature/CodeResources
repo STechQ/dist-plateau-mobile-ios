@@ -682,11 +682,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		84zqs9l7/gDnvJSFfFojZlkPjMk=
+		yUz+gHGACthqV9omMMgPSd2tBYs=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		ME3o6X9dgQR8UIatdmeo9TxiXd4=
+		P3klmzaZSaM/dyVMvMrU+Sk6+8Q=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -706,7 +706,7 @@
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		ME3o6X9dgQR8UIatdmeo9TxiXd4=
+		P3klmzaZSaM/dyVMvMrU+Sk6+8Q=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -1954,7 +1954,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v9gXQQl/lp3NDzKKgN/cURXV1fO70w95lR+QZqC1qAk=
+			2nK6UcP7GBFf+6Yu6ZJlwGbh4aVHWbgSmWAl2ZzC/Wg=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -1989,7 +1989,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v9gXQQl/lp3NDzKKgN/cURXV1fO70w95lR+QZqC1qAk=
+			2nK6UcP7GBFf+6Yu6ZJlwGbh4aVHWbgSmWAl2ZzC/Wg=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
