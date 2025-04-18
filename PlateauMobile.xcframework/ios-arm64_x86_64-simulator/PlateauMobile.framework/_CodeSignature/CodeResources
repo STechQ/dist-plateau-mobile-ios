@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		HJC8Le+H283IhHOYEr/Wx34A7iI=
+		thLJG00mHcrHul/4ANSf8FoyU5g=
 		</data>
 		<key>Fonts/Arial Black.ttf</key>
 		<data>
@@ -672,9 +672,13 @@
 		<data>
 		D7Aiess9Tq/EfEbhToDAcWhiBro=
 		</data>
+		<key>Fonts/mdi-icons.ttf</key>
+		<data>
+		nlZxmz3v4RKK3I8xSowCb/+tnoA=
+		</data>
 		<key>Headers/PlateauMobile-Swift.h</key>
 		<data>
-		IICXkn7cpTXkkKw0EHQ+Mxdxqvk=
+		UTWjSUO6GiJal9D9/RZPPw6CMBo=
 		</data>
 		<key>Headers/QuickBridge.h</key>
 		<data>
@@ -682,47 +686,51 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yUz+gHGACthqV9omMMgPSd2tBYs=
+		n6u2Q92L82g7jjgcQf9BOsUPHLQ=
+		</data>
+		<key>Mocks.sqlite3</key>
+		<data>
+		Ar6HaglmwKDzhyuwQCQFFDaGe14=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		P3klmzaZSaM/dyVMvMrU+Sk6+8Q=
+		AQwmS3tCh/CpywArLq0O45WYW5A=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ORSJ3J+gx5FNg8z17vKAB+WlRpQ=
+		kMx0vRWrLpDxbGXV39ducCI03uA=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		iSBscz48sPuvomBg9JXFI4gOZwQ=
+		ggxEfSIzx6cMYXtyeo9Vc6oCO9A=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ORSJ3J+gx5FNg8z17vKAB+WlRpQ=
+		kMx0vRWrLpDxbGXV39ducCI03uA=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fYsvXVQNJupYER3qiXvOjfrXJxM=
+		+8ER2axkB58w9KUmD2ZPXsaiWl8=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		P3klmzaZSaM/dyVMvMrU+Sk6+8Q=
+		AQwmS3tCh/CpywArLq0O45WYW5A=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		EPwQz+JknqBKXXiMZPOaO8+EZMo=
+		jeuAlYCo1AIz+v9TX+mYwZEly4M=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		WQQyiPywkvq+y0oQvaE7V1PwqZw=
+		S8h2O+iqK3GSxDlDhzVodetkoUI=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		EPwQz+JknqBKXXiMZPOaO8+EZMo=
+		jeuAlYCo1AIz+v9TX+mYwZEly4M=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		CIHFhAVmXlYgCokK+W0AUVcHORo=
+		3OeRdxpaIR1034s0EeTrp7Dymw8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -730,19 +738,19 @@
 		</data>
 		<key>QMButton.nib</key>
 		<data>
-		QzDRSC6kKlFwPSDZdno5D+PjPnk=
+		rvYvdzgCbZ6IYyfGHzVifEq3VAU=
 		</data>
 		<key>QMSegmentView.nib</key>
 		<data>
-		cABz5OourcMUJnamoGUF0HvjNng=
+		PYYdCxvwdAztE0vHXsaTjKHnv0g=
 		</data>
 		<key>QMUIButton.nib</key>
 		<data>
-		2yakPdelMFvCv3vsKyF2y4p8/MQ=
+		Kkaivs5Vgo1OSzUoWkr6SMkyeMQ=
 		</data>
 		<key>QRSimulator.storyboardc/2N3-k6-DyG-view-QYk-ED-jYI.nib</key>
 		<data>
-		2E4F2pirSo+7C0KADcChsuk8KII=
+		ZLYh296+yk9P8YIoiWNdhEsfBzM=
 		</data>
 		<key>QRSimulator.storyboardc/Info.plist</key>
 		<data>
@@ -754,15 +762,19 @@
 		</data>
 		<key>bridgets.js</key>
 		<data>
-		1n6sUhfQ6obqAr2oB/dbjE0I+ow=
+		az8FWEfoTHj1b29S9Oqr/4JdC2s=
 		</data>
 		<key>css/customcss.css</key>
 		<data>
-		oyi6rLqwAYlOmizF+i/50M1YXJc=
+		wOvzJkKWrG+rGWFz/DC4odc63TE=
 		</data>
 		<key>css/globalcss.css</key>
 		<data>
 		xSwdgtKF8LvhZiTkCIuP1R+Fxh4=
+		</data>
+		<key>icons.sqlite3</key>
+		<data>
+		kC97FTZGPgncAarnKl1bfUpsjg8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -771,7 +783,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7uVG+xMuqBswNs3ScRkze+FsHCtTJAgWfstYsR5UEvY=
+			4xAiY4jKNPmq/RXTUL/Q+jqclYUObz23nuFr7a0gE7c=
 			</data>
 		</dict>
 		<key>Fonts/Arial Black.ttf</key>
@@ -1936,11 +1948,18 @@
 			WDnF9eVQ47HHBZoRuL4AZO5hvz6ybcaq5/P9VJFTOuw=
 			</data>
 		</dict>
+		<key>Fonts/mdi-icons.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xcikoVf1OnCiJxbYC39NLfWioO6Sdz5AX3ym8lcsetM=
+			</data>
+		</dict>
 		<key>Headers/PlateauMobile-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t4Uuk6/ASk/W+5ExBFBOv/nUCoOUsbIqp3wkPGG1m0s=
+			Uo9jgvPPYxZoTzLEqag0Qqwt+PgnD2HsLFkCl1+kub4=
 			</data>
 		</dict>
 		<key>Headers/QuickBridge.h</key>
@@ -1950,74 +1969,81 @@
 			OQyVt+SW0V3TQXKNJPOAmgSNBSQTVIBOx3F6Fb4Om+I=
 			</data>
 		</dict>
+		<key>Mocks.sqlite3</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NOWVTSuvQm+qVyGuv2rO4sGCS3fQxSrJubtclif/8E0=
+			</data>
+		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2nK6UcP7GBFf+6Yu6ZJlwGbh4aVHWbgSmWAl2ZzC/Wg=
+			t3b7Gd6hyUMmtWT9TffHPFWhC97pXQ+ZB6UiERVqwdA=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cXbUpuH87Gtb2HJKdji+2phIvcSbmY2JxlYyn1Hw41Q=
+			AHPL8NEx+laVpW+X4rd5ULegCk5jY3I/G+CVVbasldk=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LWRvy8ssFSHjd+SGLDZBeIRQYSg41nDqEHk9BzgFvOo=
+			jZMI8xLwDBccV9kreTwHyoI/435B+P1O5gNH+72I5e0=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cXbUpuH87Gtb2HJKdji+2phIvcSbmY2JxlYyn1Hw41Q=
+			AHPL8NEx+laVpW+X4rd5ULegCk5jY3I/G+CVVbasldk=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			g675SyETgtHAN/LXRNVeJWVgaVMkmQNBeNVwako2sDA=
+			K1rY7GNkq7E0wZetelNjAPAUHsvdW6zImiN9W8+jtlU=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2nK6UcP7GBFf+6Yu6ZJlwGbh4aVHWbgSmWAl2ZzC/Wg=
+			t3b7Gd6hyUMmtWT9TffHPFWhC97pXQ+ZB6UiERVqwdA=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CVdJHCZgxkb+CO6UNeLxKuuQw0X/Yg/GzQBM90zw4PI=
+			KPB1eWXaNBe7OXIl8cLhFMTA/4C8R8sPHJBWt1TasBA=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OdY3mROaoi6kQaXi/r7C5mBKGiygc0Z801Az9X19DNM=
+			eJiaih6sbihMwh1/b8dJFBJY4E8crLbd5Q7xjPtffmc=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CVdJHCZgxkb+CO6UNeLxKuuQw0X/Yg/GzQBM90zw4PI=
+			KPB1eWXaNBe7OXIl8cLhFMTA/4C8R8sPHJBWt1TasBA=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sC50ZsNt80rMvUTi3DRbQyRGLAh4bXEJJGO+4NxMjRs=
+			UtK7/WbkcK2jvipdo1UsrFuIzhjSxMbmGTaIXt5FZAY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2031,28 +2057,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cvdA2bnHG6ToOhbppNLWrhPqkeqBqKteAjp+1xccFfY=
+			Ir9QFbzGX7EYPcbxXAE4nJE5uuADQo5d2oCNJsSwkjs=
 			</data>
 		</dict>
 		<key>QMSegmentView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Vy31YTE9HtVpZaiKVdnyT01HxuDDot3cHhVcgg7Ps98=
+			09dDNLZzO8+yf+cLcOf5EkZZaXEXw+7s7i1OzSXAzqE=
 			</data>
 		</dict>
 		<key>QMUIButton.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OfKGXzW902EQZQVcN2vktOCedgOHdWGIbvzYIpW18s4=
+			Yk3KdwV4lU2uqFUUr/FPkDZyjWSTMFAlsTMO8Z7pd08=
 			</data>
 		</dict>
 		<key>QRSimulator.storyboardc/2N3-k6-DyG-view-QYk-ED-jYI.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DHxQSBpcqIR2QBQcA3xT3sPN8qixC4/cQwgA+VOO2Ng=
+			HEimXsniPQGYtW5Y9Rtw9msRaY2Pv+UcSLmgp31E95c=
 			</data>
 		</dict>
 		<key>QRSimulator.storyboardc/Info.plist</key>
@@ -2073,14 +2099,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AuzZLORq/rHHAJV7f01RAxRABQNgx4ZkBLLkNNPDSJs=
+			twfnHsE0M7NHTBvn2dUSxi0qTxGNqgd5iRLLvaI6a/A=
 			</data>
 		</dict>
 		<key>css/customcss.css</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Iwblw5Ee1qTN6zniKXjKCRzjqpMdeIjfaUle0M8w6i4=
+			0WcvtzZOlEPPU5lJw2OfkBVtey68fWmNRJGJb01qn/A=
 			</data>
 		</dict>
 		<key>css/globalcss.css</key>
@@ -2088,6 +2114,13 @@
 			<key>hash2</key>
 			<data>
 			12TBS5Pfjkxq/Kq1OxdENA7QhdELhXTE+OPcU3Cz4ow=
+			</data>
+		</dict>
+		<key>icons.sqlite3</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TBQ7jq6wGsjTmHMqpelKt9/7KWGBMtHRqy9F6C6o60g=
 			</data>
 		</dict>
 	</dict>

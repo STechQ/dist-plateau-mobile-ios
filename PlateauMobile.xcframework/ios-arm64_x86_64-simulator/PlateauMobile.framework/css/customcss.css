@@ -338,3 +338,6 @@ body .v-application .fontsize-48  { font-size: 48px !important; }
     -webkit-appearance: none;
     box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.20)!important;
 }
+body .v-application .gradientCont {
+    background: linear-gradient(180deg, #2045ae 0%, #347ce3 180%, #ffffff 0%) !important;
+}
