@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/alperenerdem/Library/Developer/Xcode/DerivedData/PlateauMobile-efjnzfjjxpzoxqewdaenpxdcpwzy/Build/Products/Release-iphonesimulator/PlateauMobile.framework/PlateauMobile'
+relocations:     []
+...
