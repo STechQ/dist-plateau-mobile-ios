@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name PlateauMobile
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name PlateauMobile
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFoundation
 import AVKit
@@ -114,6 +114,7 @@ extension PlateauMobile.VAppBar {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VInlineDatepicker : PlateauMobile.InputBase {
+  @_Concurrency.MainActor @preconcurrency @objc override public func setComponentColored(hasError: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(frame: CoreFoundation.CGRect)
   @objc deinit
@@ -257,6 +258,7 @@ extension ObjectiveC.NSObject {
   public var socket: Starscream.WebSocket?
   public var isDrawing: Swift.Bool
   public var styleAdditions: Swift.String
+  public var configurationNeeded: Swift.Bool
   public typealias Closure = (_ val: Any) -> Swift.Void
   public func closeConnection()
   public func clientLogRequest(level: Swift.String, items: [Any], source: Swift.String)
@@ -460,6 +462,17 @@ extension PlateauMobile.BaseComponent {
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(frame: CoreFoundation.CGRect)
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class InfiniteScrollViewModel : PlateauMobile.BaseViewModel {
+  @objc public var items: [[Swift.String : Any]]? {
+    @objc get
+    @objc set
+  }
+  @objc public var componentCount: Swift.Int
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class InfiniteScrollStyleProps : PlateauMobile.BaseStyleProps {
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @objcMembers public class AlertViewCss : PlateauMobile.BaseCss {
   @objc required dynamic public init()
   @objc deinit
@@ -588,6 +601,7 @@ extension PlateauMobile.BaseComponent {
   @objc public var errorMessageStyle: Swift.String
   @objc public var errorMessageLineHeight: Swift.String
   @objc public var EMCombinedFont: Swift.String
+  @objc public var errorMessageCombinedFont: Swift.String
   @objc public var appendIconColor: Swift.String
   @objc public var appendOuterIconColor: Swift.String
   @objc public var prependIconColor: Swift.String
@@ -596,6 +610,7 @@ extension PlateauMobile.BaseComponent {
   @objc public var inputPaddingBottom: Swift.String
   @objc public var inputPaddingRight: Swift.String
   @objc public var inputPaddingLeft: Swift.String
+  @objc public var legendMarginLeft: Swift.String
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class InputBaseViewModel : PlateauMobile.BaseViewModel {
@@ -616,6 +631,7 @@ extension PlateauMobile.BaseComponent {
   @objc @_Concurrency.MainActor @preconcurrency override public func setBorders()
   @objc @_Concurrency.MainActor @preconcurrency public func setFonts()
   @objc @_Concurrency.MainActor @preconcurrency override public func applyStyleUpdates()
+  @objc @_Concurrency.MainActor @preconcurrency public func setComponentColored(hasError: Swift.Bool)
   @objc deinit
   @_Concurrency.MainActor @preconcurrency @objc override public func onValidate(validationResult: [Swift.String : Any])
   @_Concurrency.MainActor @preconcurrency @objc override public func onViewWillAppear()
@@ -833,6 +849,24 @@ public protocol BaseStyleDelegate : AnyObject {
   @objc required public init(styles: [Swift.String : Any])
   @objc deinit
 }
+public enum MockType {
+  case db
+  case network
+  public static func == (a: PlateauMobile.MockType, b: PlateauMobile.MockType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class QBMockManager : ObjectiveC.NSObject {
+  public var mockStore: (any PlateauMobile.MockStore)?
+  public static var sharedMockManager: PlateauMobile.QBMockManager!
+  public static func initMockManager() -> PlateauMobile.QBMockManager
+  public class func shared() -> PlateauMobile.QBMockManager
+  public func startMockCapture(type: PlateauMobile.MockType)
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @objcMembers public class VTimelineCss : PlateauMobile.BaseCss {
   @objc deinit
   @objc required dynamic public init()
@@ -976,6 +1010,7 @@ public struct CSSS {
 public class QuickDelegate : PlateauMobile.QMQuickProtocol {
   public init()
   @objc public func setQuickSettings()
+  @objc public func addLog(level: Swift.String, source: Swift.String, message: Swift.String)
   @objc public func getMainCss() -> Swift.String
   @objc public func hostTrigger(functionName: Swift.String?, param: [Swift.String : Any]?, callBack: JavaScriptCore.JSValue, context: JavaScriptCore.JSContext, pageNames: [Swift.String])
   @objc public func getAppBaseUrl() -> Swift.String
@@ -983,7 +1018,7 @@ public class QuickDelegate : PlateauMobile.QMQuickProtocol {
 }
 public class QuickNetworkDelegate : PlateauMobile.QMNetworkDelegateProtocol {
   public var cachingMode: Swift.Bool
-  public init()
+  public init(certificates: [PlateauMobile.PlateauCertificate])
   @objc public func sendModelRequest(qjsonPath: Swift.String, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue)
   public func cacheJsonString(jsonString: Swift.String, pageID: Swift.String)
   public func getPageIfExists(qjsonPath: Swift.String) -> (exists: Swift.Bool, data: Swift.String?)
@@ -1032,6 +1067,9 @@ public class QuickBridge {
   public func qb_PrintLog(logMessage: [Any], logType: Swift.Int)
   public func qb_SetCompClass(compUID: Swift.String, addClassList: [Swift.String], removeClassList: [Swift.String])
   public func qb_isPageComplete() -> Swift.Bool
+  public func qb_SetHostTriggerModel(hostTriggerModel: Swift.String, clientStatic: [Swift.String : Any]?)
+  public func qb_SetHostTriggerClientMock(clientStatic: [Swift.String : Any])
+  public func qb_ClearHostTriggerClientMock(functionName: Swift.String)
   public func qb_SetAlertQjson(qjson: Swift.String, displayAlertCallback: @escaping (JavaScriptCore.JSValue) -> Swift.Void)
   public func getAndResolveStaticJson(json: Swift.String!, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue, error: Any?, bundle: Swift.String? = "")
   public func getTypeName(object: JavaScriptCore.JSValue) -> Swift.String
@@ -1057,22 +1095,22 @@ public class QuickBridge {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VTextFieldStyleProps : PlateauMobile.InputBaseStyleProps {
   @objc public var innerActiveBorderAndLabelColor: Swift.String
+  @objc public var textAlign: Swift.String
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor @preconcurrency public class VTextField : PlateauMobile.InputBase {
   @objc @_Concurrency.MainActor @preconcurrency public func focus()
   @objc deinit
   @_Concurrency.MainActor @preconcurrency @objc public func onValidateCheck(validationResult: [Swift.String : Any])
+  @_Concurrency.MainActor @preconcurrency @objc override public func applyStyleUpdates()
   @objc @_Concurrency.MainActor @preconcurrency override public func applyUIUpdates()
   @_Concurrency.MainActor @preconcurrency @objc override public func onViewWillAppear()
   @objc @_Concurrency.MainActor @preconcurrency override public func applyErrors(errorMessage: Any?)
   @_Concurrency.MainActor @preconcurrency @objc public func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency @objc public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override public func setComponentColored(hasError: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(frame: CoreFoundation.CGRect)
-}
-extension PlateauMobile.VTextField {
-  @objc @_Concurrency.MainActor @preconcurrency dynamic public func setComponentColored(hasError: Swift.Bool)
 }
 @objc @_inheritsConvenienceInitializers public class DxColumnFixingCss : PlateauMobile.BaseCss {
   @objc required dynamic public init()
@@ -1109,6 +1147,7 @@ extension PlateauMobile.DxColumnFixing {
   @objc public var language: Swift.String
   @objc public var simulatorMode: Swift.Bool
   @objc public var simulatorType: Swift.String
+  public var certificates: [PlateauMobile.PlateauCertificate]
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1123,16 +1162,22 @@ extension PlateauMobile.DxColumnFixing {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VExpansionPanelContentViewModel : PlateauMobile.BaseViewModel {
   @objc deinit
 }
+@objc open class TransitionInfo : ObjectiveC.NSObject {
+  public init(type: PlateauMobile.ScreenTransitionType, subtype: PlateauMobile.ScreenTransitionSubType? = nil)
+  public func toBridgeTransitionType() -> [Swift.String : Any]
+  @objc deinit
+}
 @objc public protocol QMScreenDelegateProtocol {
   @objc optional var parameters: [Swift.String : Any] { get set }
   @objc func showLoadingView()
   @objc func hideLoadingView()
   @objc optional func callMethod(functionName: Swift.String?, param: [Swift.String : Any]?, callBack: JavaScriptCore.JSValue, context: JavaScriptCore.JSContext, pageNames: [Swift.String])
-  @objc optional func redirectToNativePage(pageId: Swift.String, parameters: [Swift.String : Any], transitionStyle: Swift.String)
+  @objc optional func redirectToNativePage(pageId: Swift.String, parameters: [Swift.String : Any], transitionStyle: PlateauMobile.TransitionInfo)
   @objc optional func saveToLocalStorage(key: Swift.String, value: Swift.String)
   @objc optional func getFromLocalStorage(key: Swift.String) -> Swift.String
   @objc optional func clearLocalStorage()
   @objc optional func removeItemFromLocalStorage(key: Swift.String)
+  @objc optional func twoFingerLongPressed()
 }
 @objc public protocol QMNetworkDelegateProtocol {
   @objc optional func sendModelRequest(qjsonPath: Swift.String, success: JavaScriptCore.JSValue, fail: JavaScriptCore.JSValue)
@@ -1143,6 +1188,7 @@ extension PlateauMobile.DxColumnFixing {
   @objc func getMainCss() -> Swift.String
   @objc func hostTrigger(functionName: Swift.String?, param: [Swift.String : Any]?, callBack: JavaScriptCore.JSValue, context: JavaScriptCore.JSContext, pageNames: [Swift.String])
   @objc func getAppBaseUrl() -> Swift.String
+  @objc func addLog(level: Swift.String, source: Swift.String, message: Swift.String)
 }
 @objc @_Concurrency.MainActor @preconcurrency open class QBBaseViewController : UIKit.UIViewController, UIKit.UIScrollViewDelegate, PlateauMobile.QMScreenDelegateProtocol, PlateauMobile.QMNetworkDelegateProtocol, UIKit.UIGestureRecognizerDelegate {
   @_Concurrency.MainActor @preconcurrency @objc public func showLoadingView()
@@ -1161,7 +1207,7 @@ extension PlateauMobile.DxColumnFixing {
   @_Concurrency.MainActor @preconcurrency public var pageId: Swift.String
   @_Concurrency.MainActor @preconcurrency public var fixedChilds: [UIKit.UIView]
   @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
-  @_Concurrency.MainActor @preconcurrency public init(pagePath: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public init(pagePath: Swift.String, transitionInfo: PlateauMobile.TransitionInfo? = nil)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
     @objc get
@@ -1353,9 +1399,36 @@ extension PlateauMobile.CalendarUtil {
   public static let headerDefaultFormatter: Foundation.DateFormatter
   public static let headerDefaultMonthFormatter: Foundation.DateFormatter
 }
+public enum ScreenTransitionType : Swift.String {
+  case slideIn
+  case slideOut
+  case fade
+  case instant
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ScreenTransitionSubType : Swift.String {
+  case fromLeft
+  case fromRight
+  case fromTop
+  case fromBottom
+  case toLeft
+  case toRight
+  case toTop
+  case toBottom
+  case none
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
 extension UIKit.UINavigationController {
-  @_Concurrency.MainActor @preconcurrency public func pop(transitionType type: QuartzCore.CATransitionType = CATransitionType.fade, duration: CoreFoundation.CFTimeInterval = 0.3)
-  @_Concurrency.MainActor @preconcurrency public func push(viewController vc: UIKit.UIViewController, transitionType type: QuartzCore.CATransitionType = CATransitionType.fade, duration: CoreFoundation.CFTimeInterval = 0.3, transitionSubtype: QuartzCore.CATransitionSubtype = CATransitionSubtype.fromLeft)
+  @_Concurrency.MainActor @preconcurrency public func performBack(viewController vc: UIKit.UIViewController?, transitionType type: PlateauMobile.ScreenTransitionType = ScreenTransitionType.fade, transitionSubtype: PlateauMobile.ScreenTransitionSubType?, duration: CoreFoundation.CFTimeInterval = 0.3)
+  @_Concurrency.MainActor @preconcurrency public func performTransition(viewController vc: UIKit.UIViewController, transitionType type: PlateauMobile.ScreenTransitionType = ScreenTransitionType.fade, transitionSubtype: PlateauMobile.ScreenTransitionSubType?, duration: CoreFoundation.CFTimeInterval = 0.3)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class VCarouselCell : UIKit.UICollectionViewCell {
   @objc deinit
@@ -1943,7 +2016,6 @@ extension PlateauMobile.CircularLayer : QuartzCore.CAAnimationDelegate {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VSelect : PlateauMobile.InputBase {
   @objc deinit
-  @_Concurrency.MainActor @preconcurrency @objc public func onValidateCheck(validationResult: [Swift.String : Any])
   @_Concurrency.MainActor @preconcurrency @objc override public func onPostRender()
   @objc @_Concurrency.MainActor @preconcurrency public func setupViewModelProperties()
   @_Concurrency.MainActor @preconcurrency @objc override public func onViewWillAppear()
@@ -1953,6 +2025,7 @@ extension PlateauMobile.CircularLayer : QuartzCore.CAAnimationDelegate {
   @_Concurrency.MainActor @preconcurrency @objc override public func outlineViewMask()
   @_Concurrency.MainActor @preconcurrency @objc override public func setCorners()
   @objc @_Concurrency.MainActor @preconcurrency public func clicked(_ sender: UIKit.UITapGestureRecognizer)
+  @_Concurrency.MainActor @preconcurrency @objc override public func setComponentColored(hasError: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(frame: CoreFoundation.CGRect)
 }
@@ -2073,24 +2146,6 @@ extension PlateauMobile.DxSelection {
   @objc @_Concurrency.MainActor @preconcurrency public func hideMenu()
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(frame: CoreFoundation.CGRect)
-  @objc deinit
-}
-public enum MockType {
-  case db
-  case network
-  public static func == (a: PlateauMobile.MockType, b: PlateauMobile.MockType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers public class QBResourceManager : ObjectiveC.NSObject {
-  public var mockStore: (any PlateauMobile.MockStore)?
-  public static var sharedResourceManager: PlateauMobile.QBResourceManager!
-  public static func initResourceManager() -> PlateauMobile.QBResourceManager
-  public class func shared() -> PlateauMobile.QBResourceManager
-  public func startMockCapture(type: PlateauMobile.MockType)
-  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class VExpansionPanelsCss : PlateauMobile.BaseCss {
@@ -2757,7 +2812,7 @@ extension PlateauMobile.DxDataGrid {
   @_Concurrency.MainActor @preconcurrency public func horizontalSeperator() -> UIKit.UIView
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class QBNetworkManager : ObjectiveC.NSObject {
-  public func initialize(certificateNames: [Swift.String])
+  public func initialize(certificates: [PlateauMobile.PlateauCertificate])
   public class func shared() -> PlateauMobile.QBNetworkManager
   public enum Error : Swift.Error {
     case connectivity
@@ -3028,7 +3083,7 @@ public class RenderContext {
   public var viewModel: PlateauMobile.BaseViewModel
   public var styleProps: PlateauMobile.BaseStyleProps
   public var styles: [Swift.String : [Swift.String : Swift.String]]
-  public var transitionType: Swift.String
+  public var transitionType: PlateauMobile.TransitionInfo
   public var currentView: UIKit.UIView?
   public var mainView: UIKit.UIView?
   public var componentDictDict: [Swift.String : [Swift.String : PlateauMobile.BaseComponent]]
@@ -3266,12 +3321,22 @@ extension PlateauMobile.VBadge {
   @objc @_Concurrency.MainActor @preconcurrency public func clicked(_ sender: UIKit.UITapGestureRecognizer)
   @_Concurrency.MainActor @preconcurrency @objc override public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
   @_Concurrency.MainActor @preconcurrency @objc override public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
-  @objc @_Concurrency.MainActor @preconcurrency public func setComponentColored(hasError: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(frame: CoreFoundation.CGRect)
   @objc deinit
 }
 public struct InputsConstant {
+}
+public struct PlateauCertificate {
+  public var certificateString: Swift.String
+  public var domain: Swift.String
+  public var certificate: Security.SecCertificate?
+  public var certificateData: Foundation.Data?
+  public var portalCertificate: Swift.Bool
+  public init(certificateString: Swift.String, domain: Swift.String, certificateFunc: @escaping () -> Security.SecCertificate?)
+  public init(withData: Swift.String, domain: Swift.String)
+  public init(withFileName: Swift.String = "CertOV", domain: Swift.String, in bundle: Foundation.Bundle = .main)
+  public static func pinnedDomainsContains(_ domain: Swift.String, pinnedCertificates: [PlateauMobile.PlateauCertificate]) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers public class VSnackbarCss : PlateauMobile.BaseCss {
   @objc required dynamic public init()
@@ -3564,8 +3629,8 @@ extension PlateauMobile.VProgressLinear {
   public class func eventCompleted(compUID: Swift.String, eventName: Swift.String, isPageComplete: Swift.Bool, pageId: Swift.String)
   public func updateStyles(includeCached: Swift.Bool, pageId: Swift.String) -> PlateauMobile.CSSS
   public func updateStlyeChangesOnly(components: [Any])
-  public static func openPage(pagePath: Swift.String, parameters: [Swift.String : Any], screenDelegate: any PlateauMobile.QMScreenDelegateProtocol, networkDelegate: any PlateauMobile.QMNetworkDelegateProtocol, quickDelegate: any PlateauMobile.QMQuickProtocol, transtition: Swift.String)
-  public static func request(pagePath: Swift.String, display: @escaping (JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue) -> Swift.Void, parameters: [Swift.String : Any], transition: Swift.String = "push")
+  public static func openPage(pagePath: Swift.String, parameters: [Swift.String : Any], screenDelegate: any PlateauMobile.QMScreenDelegateProtocol, networkDelegate: any PlateauMobile.QMNetworkDelegateProtocol, quickDelegate: any PlateauMobile.QMQuickProtocol, transtition: PlateauMobile.TransitionInfo)
+  public static func request(pagePath: Swift.String, display: @escaping (JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue, JavaScriptCore.JSValue) -> Swift.Void, parameters: [Swift.String : Any], transition: PlateauMobile.TransitionInfo)
   public static func executeRulesSingle(value: Any, rules: JavaScriptCore.JSValue) -> Any
   public static func executeRulesMultiple(value: Any, rules: JavaScriptCore.JSValue) -> [Any]
   public static func initSimulator(staticClientId: Swift.String) -> PlateauMobile.QRScannerController
@@ -3577,15 +3642,19 @@ extension PlateauMobile.VProgressLinear {
   public func loadCSS()
   public func setLogParams()
   public func setPipelineJson()
+  public func setHostTriggerModel()
   public func setLoadingJson()
   public func getClientInfo() -> [Swift.String : Any]
   public func osName() -> Swift.String
   public func getFonts(completion: @escaping () -> Swift.Void)
   public func downloadDocumentWithBase64(data: Swift.String, fileName: Swift.String)
+  public func downloadAndShareFileFromURL(url: Foundation.URL, fileName: Swift.String? = nil)
+  public func shareFileWith(configuration: [Swift.String : Swift.String])
   public func loadFileAsync(url: Foundation.URL, completion: @escaping (Swift.String?, (any Swift.Error)?) -> Swift.Void)
   public static func loadFileSync(url: Foundation.URL, completion: @escaping (Swift.String?, (any Swift.Error)?) -> Swift.Void)
   public static func showTechnicalErrorDialog(alertMessage: Swift.String, errorCode: Swift.String? = "", screenDelegate: any PlateauMobile.QMScreenDelegateProtocol)
-  public static func requestPage(pagePath: Swift.String, parameters: [Swift.String : Any], screenDelegate: any PlateauMobile.QMScreenDelegateProtocol, networkDelegate: any PlateauMobile.QMNetworkDelegateProtocol, quickDelegate: any PlateauMobile.QMQuickProtocol, transtition: Swift.String)
+  public static func requestPage(pagePath: Swift.String, parameters: [Swift.String : Any], screenDelegate: any PlateauMobile.QMScreenDelegateProtocol, networkDelegate: any PlateauMobile.QMNetworkDelegateProtocol, quickDelegate: any PlateauMobile.QMQuickProtocol, transtition: PlateauMobile.TransitionInfo)
+  public static func transitionResolve(transitionDict: [Swift.AnyHashable : Any]?) -> (PlateauMobile.ScreenTransitionType, PlateauMobile.ScreenTransitionSubType)
   public static func getCSSAndApplyStyles(elements: [Any]) -> [Swift.String : [Swift.String : Swift.String]]
   public static func applyCSSStyles(elements: [Any], cssStyles: [Swift.String : [Swift.String : Swift.String]]) -> [Swift.String : [Swift.String : Swift.String]]
   public static func qb_loadCSS(deviceSettings: Any, css: [Swift.String])
@@ -3597,7 +3666,7 @@ extension PlateauMobile.VProgressLinear {
   public func qb_SetTheme()
   public func qb_SetThemeMode()
   public func qb_SetConfigValues()
-  public static func openNativeScreen(screenId: Swift.String, param: [Swift.String : Any], transitionStyle: Swift.String)
+  public static func openNativeScreen(screenId: Swift.String, param: [Swift.String : Any], transitionStyle: JavaScriptCore.JSValue)
   @objc public static func openSimulatorJson(json: Swift.String, screenDelegate: any PlateauMobile.QMScreenDelegateProtocol, networkDelegate: any PlateauMobile.QMNetworkDelegateProtocol, quickDelegate: any PlateauMobile.QMQuickProtocol, simulatorType: Swift.String)
   @objc public static func setSimulatorJsonLoaded(status: Swift.Bool)
   public static func qb_setAlertQjson(qjson: Swift.String, displayAlertCallback: @escaping (JavaScriptCore.JSValue) -> Swift.Void)
@@ -3623,7 +3692,7 @@ extension PlateauMobile.VProgressLinear {
     get
     set
   }
-  public func startApplication(appUrl: Swift.String, transition: Swift.String = "push", parameters: [Swift.String : Any] = [:], previewMode: Swift.Bool = false, showloading: @escaping () -> Swift.Void, hideLoading: @escaping () -> Swift.Void, screenDelegate: any PlateauMobile.QMScreenDelegateProtocol = QBRenderingManager.shared.screenDelegate!, errorCallback: @escaping () -> Swift.Void)
+  public func startApplication(appUrl: Swift.String, transition: PlateauMobile.TransitionInfo, parameters: [Swift.String : Any] = [:], previewMode: Swift.Bool = false, showloading: @escaping () -> Swift.Void, hideLoading: @escaping () -> Swift.Void, screenDelegate: any PlateauMobile.QMScreenDelegateProtocol = QBRenderingManager.shared.screenDelegate!, errorCallback: @escaping () -> Swift.Void)
   public func startApp(configuration: PlateauMobile.QBConfiguration, parameters: [Swift.String : Any], successCallback: @escaping () -> Swift.Void, errorCallback: @escaping () -> Swift.Void)
   public func createContinerView() -> PlateauMobile.CCContainerView
   public func renderView(components: [Any], frame: CoreFoundation.CGRect, addContainerView: Swift.Bool, cssStyles: [Swift.String : [Swift.String : Swift.String]]) -> UIKit.UIView
@@ -4311,6 +4380,7 @@ public enum DataType : Swift.String {
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class QRScannerController : UIKit.UIViewController, PlateauMobile.QMScreenDelegateProtocol, PlateauMobile.QMNetworkDelegateProtocol, PlateauMobile.QMQuickProtocol, PlateauMobile.QRuntimePermissionListenerProtocol {
   @_Concurrency.MainActor @preconcurrency @objc public func getAppBaseUrl() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency @objc public func addLog(level: Swift.String, source: Swift.String, message: Swift.String)
   @_Concurrency.MainActor @preconcurrency @objc public func saveToLocalStorage(key: Swift.String, value: Swift.String)
   @_Concurrency.MainActor @preconcurrency @objc public func getFromLocalStorage(key: Swift.String) -> Swift.String
   @_Concurrency.MainActor @preconcurrency @objc public func clearLocalStorage()
@@ -4500,6 +4570,24 @@ extension Foundation.Data {
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(frame: CoreFoundation.CGRect)
   @objc deinit
 }
+public struct Position : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers public class QBLocationManager : ObjectiveC.NSObject, CoreLocation.CLLocationManagerDelegate, PlateauMobile.QRuntimePermissionListenerProtocol {
+  public static let shared: PlateauMobile.QBLocationManager
+  @objc override dynamic public init()
+  public func getLocation(completion: @escaping (Swift.Result<PlateauMobile.Position, any Swift.Error>) -> Swift.Void)
+  @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
+  @available(iOS 14.0, *)
+  @objc public func locationManagerDidChangeAuthorization(_ manager: CoreLocation.CLLocationManager)
+  @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
+  @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: any Swift.Error)
+  @objc public func onRuntimePermissionGranted(grantedPermissions: [Swift.String]?)
+  @objc public func onRuntimePermissionDenied(deniedPermissions: [Swift.String]?)
+  @objc public func onNeverAskAgainRuntimePermission(neverAskPermissions: [Swift.String]?)
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @objcMembers public class VStepperCss : PlateauMobile.BaseCss {
   @objc required dynamic public init()
   @objc deinit
@@ -4632,6 +4720,7 @@ extension Foundation.Data {
   @_Concurrency.MainActor @preconcurrency @objc public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
   @_Concurrency.MainActor @preconcurrency @objc public func textViewDidEndEditing(_ textView: UIKit.UITextView)
   @_Concurrency.MainActor @preconcurrency @objc public func textViewDidChange(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor @preconcurrency @objc override public func setComponentColored(hasError: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(frame: CoreFoundation.CGRect)
 }
@@ -5095,6 +5184,9 @@ extension PlateauMobile.VCarouselDataSource {
   @objc required public init(props: [Swift.String : Any])
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VComboboxStyleProps : PlateauMobile.InputBaseStyleProps {
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VCombobox : PlateauMobile.InputBase {
   @objc @_Concurrency.MainActor @preconcurrency public func clicked(_ sender: UIKit.UITapGestureRecognizer)
   @_Concurrency.MainActor @preconcurrency @objc override public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
@@ -5269,6 +5361,8 @@ extension PlateauMobile.QPermissionType : Swift.Equatable {}
 extension PlateauMobile.QPermissionType : Swift.Hashable {}
 extension PlateauMobile.QPermissionType : Swift.RawRepresentable {}
 extension PlateauMobile.Ghost : JavaScriptCore.JSExport {}
+extension PlateauMobile.MockType : Swift.Equatable {}
+extension PlateauMobile.MockType : Swift.Hashable {}
 extension PlateauMobile.LogLevel : Swift.Equatable {}
 extension PlateauMobile.LogLevel : Swift.Hashable {}
 extension PlateauMobile.TransferObject : JavaScriptCore.JSExport {}
@@ -5277,8 +5371,12 @@ extension PlateauMobile.Icon : Swift.Hashable {}
 extension PlateauMobile.Icon : Swift.RawRepresentable {}
 extension PlateauMobile.DayAppearanceStyle : Swift.Equatable {}
 extension PlateauMobile.DayAppearanceStyle : Swift.Hashable {}
-extension PlateauMobile.MockType : Swift.Equatable {}
-extension PlateauMobile.MockType : Swift.Hashable {}
+extension PlateauMobile.ScreenTransitionType : Swift.Equatable {}
+extension PlateauMobile.ScreenTransitionType : Swift.Hashable {}
+extension PlateauMobile.ScreenTransitionType : Swift.RawRepresentable {}
+extension PlateauMobile.ScreenTransitionSubType : Swift.Equatable {}
+extension PlateauMobile.ScreenTransitionSubType : Swift.Hashable {}
+extension PlateauMobile.ScreenTransitionSubType : Swift.RawRepresentable {}
 extension PlateauMobile.SwKeyStore.SecError : Swift.Equatable {}
 extension PlateauMobile.SwKeyStore.SecError : Swift.Hashable {}
 extension PlateauMobile.SwKeyStore.SecError : Swift.RawRepresentable {}

@@ -1149,6 +1149,24 @@ SWIFT_CLASS("_TtC13PlateauMobile14GhostViewModel")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC13PlateauMobile24InfiniteScrollStyleProps")
+@interface InfiniteScrollStyleProps : BaseStyleProps
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithStyles:(NSDictionary<NSString *, id> * _Nonnull)styles SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC13PlateauMobile23InfiniteScrollViewModel")
+@interface InfiniteScrollViewModel : BaseViewModel
+@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> * _Nullable items;
+@property (nonatomic) NSInteger componentCount;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithProps:(NSDictionary<NSString *, id> * _Nonnull)props SWIFT_UNAVAILABLE;
+@end
+
 @class UITextField;
 
 SWIFT_CLASS("_TtC13PlateauMobile9InputBase")
@@ -1165,6 +1183,7 @@ SWIFT_CLASS("_TtC13PlateauMobile9InputBase")
 - (void)setBorders;
 - (void)setFonts;
 - (void)applyStyleUpdates;
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (void)onValidateWithValidationResult:(NSDictionary<NSString *, id> * _Nonnull)validationResult;
 - (void)onViewWillAppear;
 - (void)initialize;
@@ -1233,6 +1252,7 @@ SWIFT_CLASS("_TtC13PlateauMobile19InputBaseStyleProps")
 @property (nonatomic, copy) NSString * _Nonnull errorMessageStyle;
 @property (nonatomic, copy) NSString * _Nonnull errorMessageLineHeight;
 @property (nonatomic, copy) NSString * _Nonnull EMCombinedFont;
+@property (nonatomic, copy) NSString * _Nonnull errorMessageCombinedFont;
 @property (nonatomic, copy) NSString * _Nonnull appendIconColor;
 @property (nonatomic, copy) NSString * _Nonnull appendOuterIconColor;
 @property (nonatomic, copy) NSString * _Nonnull prependIconColor;
@@ -1241,6 +1261,7 @@ SWIFT_CLASS("_TtC13PlateauMobile19InputBaseStyleProps")
 @property (nonatomic, copy) NSString * _Nonnull inputPaddingBottom;
 @property (nonatomic, copy) NSString * _Nonnull inputPaddingRight;
 @property (nonatomic, copy) NSString * _Nonnull inputPaddingLeft;
+@property (nonatomic, copy) NSString * _Nonnull legendMarginLeft;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithStyles:(NSDictionary<NSString *, id> * _Nonnull)styles SWIFT_UNAVAILABLE;
@@ -1456,6 +1477,7 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile25QMNetworkDelegateProtocol_")
 @end
 
 @class JSContext;
+@class TransitionInfo;
 
 SWIFT_PROTOCOL("_TtP13PlateauMobile24QMScreenDelegateProtocol_")
 @protocol QMScreenDelegateProtocol
@@ -1466,11 +1488,12 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile24QMScreenDelegateProtocol_")
 - (void)hideLoadingView;
 @optional
 - (void)callMethodWithFunctionName:(NSString * _Nullable)functionName param:(NSDictionary<NSString *, id> * _Nullable)param callBack:(JSValue * _Nonnull)callBack context:(JSContext * _Nonnull)context pageNames:(NSArray<NSString *> * _Nonnull)pageNames;
-- (void)redirectToNativePageWithPageId:(NSString * _Nonnull)pageId parameters:(NSDictionary<NSString *, id> * _Nonnull)parameters transitionStyle:(NSString * _Nonnull)transitionStyle;
+- (void)redirectToNativePageWithPageId:(NSString * _Nonnull)pageId parameters:(NSDictionary<NSString *, id> * _Nonnull)parameters transitionStyle:(TransitionInfo * _Nonnull)transitionStyle;
 - (void)saveToLocalStorageWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 - (NSString * _Nonnull)getFromLocalStorageWithKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (void)clearLocalStorage;
 - (void)removeItemFromLocalStorageWithKey:(NSString * _Nonnull)key;
+- (void)twoFingerLongPressed;
 @end
 
 
@@ -1495,6 +1518,13 @@ SWIFT_CLASS("_TtC13PlateauMobile20QBBaseViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class CLLocationManager;
+
+@interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <CLLocationManagerDelegate>
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
+@end
+
 
 SWIFT_PROTOCOL("_TtP13PlateauMobile29QPermissionManagementProtocol_")
 @protocol QPermissionManagementProtocol
@@ -1506,13 +1536,6 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile29QPermissionManagementProtocol_")
 @interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <QPermissionManagementProtocol>
 - (BOOL)hasPermissionWithPermissions:(NSArray<NSString *> * _Nullable)permissions SWIFT_WARN_UNUSED_RESULT;
 - (void)requestRuntimePermissionsWithPermissions:(NSArray<NSString *> * _Nullable)permissions listener:(id <QRuntimePermissionListenerProtocol> _Nonnull)listener;
-@end
-
-@class CLLocationManager;
-
-@interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <CLLocationManagerDelegate>
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
-- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
 @end
 
 
@@ -1533,9 +1556,29 @@ SWIFT_CLASS("_TtC13PlateauMobile15QBConfiguration")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class CLLocation;
+
+SWIFT_CLASS("_TtC13PlateauMobile17QBLocationManager")
+@interface QBLocationManager : NSObject <CLLocationManagerDelegate, QRuntimePermissionListenerProtocol>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager SWIFT_AVAILABILITY(ios,introduced=14.0);
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nonnull)error;
+- (void)onRuntimePermissionGrantedWithGrantedPermissions:(NSArray<NSString *> * _Nullable)grantedPermissions;
+- (void)onRuntimePermissionDeniedWithDeniedPermissions:(NSArray<NSString *> * _Nullable)deniedPermissions;
+- (void)onNeverAskAgainRuntimePermissionWithNeverAskPermissions:(NSArray<NSString *> * _Nullable)neverAskPermissions;
+@end
+
 
 SWIFT_CLASS("_TtC13PlateauMobile8QBLogger")
 @interface QBLogger : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC13PlateauMobile13QBMockManager")
+@interface QBMockManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1549,12 +1592,6 @@ SWIFT_CLASS("_TtC13PlateauMobile16QBNetworkManager")
 
 SWIFT_CLASS("_TtC13PlateauMobile18QBRenderingManager")
 @interface QBRenderingManager : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC13PlateauMobile17QBResourceManager")
-@interface QBResourceManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1751,6 +1788,7 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile15QMQuickProtocol_")
 - (NSString * _Nonnull)getMainCss SWIFT_WARN_UNUSED_RESULT;
 - (void)hostTriggerWithFunctionName:(NSString * _Nullable)functionName param:(NSDictionary<NSString *, id> * _Nullable)param callBack:(JSValue * _Nonnull)callBack context:(JSContext * _Nonnull)context pageNames:(NSArray<NSString *> * _Nonnull)pageNames;
 - (NSString * _Nonnull)getAppBaseUrl SWIFT_WARN_UNUSED_RESULT;
+- (void)addLogWithLevel:(NSString * _Nonnull)level source:(NSString * _Nonnull)source message:(NSString * _Nonnull)message;
 @end
 
 
@@ -1968,6 +2006,7 @@ SWIFT_CLASS("_TtC13PlateauMobile18QQrReaderViewModel")
 SWIFT_CLASS("_TtC13PlateauMobile19QRScannerController")
 @interface QRScannerController : UIViewController <QMNetworkDelegateProtocol, QMQuickProtocol, QMScreenDelegateProtocol, QRuntimePermissionListenerProtocol>
 - (NSString * _Nonnull)getAppBaseUrl SWIFT_WARN_UNUSED_RESULT;
+- (void)addLogWithLevel:(NSString * _Nonnull)level source:(NSString * _Nonnull)source message:(NSString * _Nonnull)message;
 - (void)saveToLocalStorageWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 - (NSString * _Nonnull)getFromLocalStorageWithKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (void)clearLocalStorage;
@@ -2195,6 +2234,14 @@ SWIFT_CLASS_NAMED("TransferObject")
 @end
 
 
+SWIFT_CLASS("_TtC13PlateauMobile14TransitionInfo")
+@interface TransitionInfo : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
 
 
 
@@ -2296,7 +2343,6 @@ SWIFT_CLASS("_TtC13PlateauMobile13VAutocomplete")
 - (void)clicked:(UITapGestureRecognizer * _Nonnull)sender;
 - (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
 - (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
-- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2835,6 +2881,11 @@ SWIFT_CLASS("_TtC13PlateauMobile12VComboboxCss")
 @end
 
 
+SWIFT_CLASS("_TtC13PlateauMobile19VComboboxStyleProps")
+@interface VComboboxStyleProps : InputBaseStyleProps
+@end
+
+
 SWIFT_CLASS("_TtC13PlateauMobile18VComboboxViewModel")
 @interface VComboboxViewModel : InputBaseViewModel
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -3323,6 +3374,7 @@ SWIFT_CLASS("_TtC13PlateauMobile13VImgViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile17VInlineDatepicker")
 @interface VInlineDatepicker : InputBase
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -3966,7 +4018,6 @@ SWIFT_CLASS("_TtC13PlateauMobile13VRowViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile7VSelect")
 @interface VSelect : InputBase
-- (void)onValidateCheckWithValidationResult:(NSDictionary<NSString *, id> * _Nonnull)validationResult;
 - (void)onPostRender;
 - (void)setupViewModelProperties;
 - (void)onViewWillAppear;
@@ -3976,6 +4027,7 @@ SWIFT_CLASS("_TtC13PlateauMobile7VSelect")
 - (void)outlineViewMask;
 - (void)setCorners;
 - (void)clicked:(UITapGestureRecognizer * _Nonnull)sender;
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -4634,19 +4686,17 @@ SWIFT_CLASS("_TtC13PlateauMobile10VTextField")
 @interface VTextField : InputBase
 - (void)focus;
 - (void)onValidateCheckWithValidationResult:(NSDictionary<NSString *, id> * _Nonnull)validationResult;
+- (void)applyStyleUpdates;
 - (void)applyUIUpdates;
 - (void)onViewWillAppear;
 - (void)applyErrorsWithErrorMessage:(id _Nullable)errorMessage;
 - (BOOL)textFieldShouldClear:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface VTextField (SWIFT_EXTENSION(PlateauMobile))
-- (void)setComponentColoredWithHasError:(BOOL)hasError;
-@end
 
 
 
@@ -4660,6 +4710,7 @@ SWIFT_CLASS("_TtC13PlateauMobile13VTextFieldCss")
 SWIFT_CLASS("_TtC13PlateauMobile20VTextFieldStyleProps")
 @interface VTextFieldStyleProps : InputBaseStyleProps
 @property (nonatomic, copy) NSString * _Nonnull innerActiveBorderAndLabelColor;
+@property (nonatomic, copy) NSString * _Nonnull textAlign;
 @end
 
 
@@ -4682,6 +4733,7 @@ SWIFT_CLASS("_TtC13PlateauMobile9VTextarea")
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
 - (void)textViewDidEndEditing:(UITextView * _Nonnull)textView;
 - (void)textViewDidChange:(UITextView * _Nonnull)textView;
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -5932,6 +5984,24 @@ SWIFT_CLASS("_TtC13PlateauMobile14GhostViewModel")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC13PlateauMobile24InfiniteScrollStyleProps")
+@interface InfiniteScrollStyleProps : BaseStyleProps
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithStyles:(NSDictionary<NSString *, id> * _Nonnull)styles SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC13PlateauMobile23InfiniteScrollViewModel")
+@interface InfiniteScrollViewModel : BaseViewModel
+@property (nonatomic, copy) NSArray<NSDictionary<NSString *, id> *> * _Nullable items;
+@property (nonatomic) NSInteger componentCount;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithProps:(NSDictionary<NSString *, id> * _Nonnull)props SWIFT_UNAVAILABLE;
+@end
+
 @class UITextField;
 
 SWIFT_CLASS("_TtC13PlateauMobile9InputBase")
@@ -5948,6 +6018,7 @@ SWIFT_CLASS("_TtC13PlateauMobile9InputBase")
 - (void)setBorders;
 - (void)setFonts;
 - (void)applyStyleUpdates;
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (void)onValidateWithValidationResult:(NSDictionary<NSString *, id> * _Nonnull)validationResult;
 - (void)onViewWillAppear;
 - (void)initialize;
@@ -6016,6 +6087,7 @@ SWIFT_CLASS("_TtC13PlateauMobile19InputBaseStyleProps")
 @property (nonatomic, copy) NSString * _Nonnull errorMessageStyle;
 @property (nonatomic, copy) NSString * _Nonnull errorMessageLineHeight;
 @property (nonatomic, copy) NSString * _Nonnull EMCombinedFont;
+@property (nonatomic, copy) NSString * _Nonnull errorMessageCombinedFont;
 @property (nonatomic, copy) NSString * _Nonnull appendIconColor;
 @property (nonatomic, copy) NSString * _Nonnull appendOuterIconColor;
 @property (nonatomic, copy) NSString * _Nonnull prependIconColor;
@@ -6024,6 +6096,7 @@ SWIFT_CLASS("_TtC13PlateauMobile19InputBaseStyleProps")
 @property (nonatomic, copy) NSString * _Nonnull inputPaddingBottom;
 @property (nonatomic, copy) NSString * _Nonnull inputPaddingRight;
 @property (nonatomic, copy) NSString * _Nonnull inputPaddingLeft;
+@property (nonatomic, copy) NSString * _Nonnull legendMarginLeft;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithStyles:(NSDictionary<NSString *, id> * _Nonnull)styles SWIFT_UNAVAILABLE;
@@ -6239,6 +6312,7 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile25QMNetworkDelegateProtocol_")
 @end
 
 @class JSContext;
+@class TransitionInfo;
 
 SWIFT_PROTOCOL("_TtP13PlateauMobile24QMScreenDelegateProtocol_")
 @protocol QMScreenDelegateProtocol
@@ -6249,11 +6323,12 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile24QMScreenDelegateProtocol_")
 - (void)hideLoadingView;
 @optional
 - (void)callMethodWithFunctionName:(NSString * _Nullable)functionName param:(NSDictionary<NSString *, id> * _Nullable)param callBack:(JSValue * _Nonnull)callBack context:(JSContext * _Nonnull)context pageNames:(NSArray<NSString *> * _Nonnull)pageNames;
-- (void)redirectToNativePageWithPageId:(NSString * _Nonnull)pageId parameters:(NSDictionary<NSString *, id> * _Nonnull)parameters transitionStyle:(NSString * _Nonnull)transitionStyle;
+- (void)redirectToNativePageWithPageId:(NSString * _Nonnull)pageId parameters:(NSDictionary<NSString *, id> * _Nonnull)parameters transitionStyle:(TransitionInfo * _Nonnull)transitionStyle;
 - (void)saveToLocalStorageWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 - (NSString * _Nonnull)getFromLocalStorageWithKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (void)clearLocalStorage;
 - (void)removeItemFromLocalStorageWithKey:(NSString * _Nonnull)key;
+- (void)twoFingerLongPressed;
 @end
 
 
@@ -6278,6 +6353,13 @@ SWIFT_CLASS("_TtC13PlateauMobile20QBBaseViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class CLLocationManager;
+
+@interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <CLLocationManagerDelegate>
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
+@end
+
 
 SWIFT_PROTOCOL("_TtP13PlateauMobile29QPermissionManagementProtocol_")
 @protocol QPermissionManagementProtocol
@@ -6289,13 +6371,6 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile29QPermissionManagementProtocol_")
 @interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <QPermissionManagementProtocol>
 - (BOOL)hasPermissionWithPermissions:(NSArray<NSString *> * _Nullable)permissions SWIFT_WARN_UNUSED_RESULT;
 - (void)requestRuntimePermissionsWithPermissions:(NSArray<NSString *> * _Nullable)permissions listener:(id <QRuntimePermissionListenerProtocol> _Nonnull)listener;
-@end
-
-@class CLLocationManager;
-
-@interface QBBaseViewController (SWIFT_EXTENSION(PlateauMobile)) <CLLocationManagerDelegate>
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
-- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager;
 @end
 
 
@@ -6316,9 +6391,29 @@ SWIFT_CLASS("_TtC13PlateauMobile15QBConfiguration")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class CLLocation;
+
+SWIFT_CLASS("_TtC13PlateauMobile17QBLocationManager")
+@interface QBLocationManager : NSObject <CLLocationManagerDelegate, QRuntimePermissionListenerProtocol>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)locationManagerDidChangeAuthorization:(CLLocationManager * _Nonnull)manager SWIFT_AVAILABILITY(ios,introduced=14.0);
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
+- (void)locationManager:(CLLocationManager * _Nonnull)manager didFailWithError:(NSError * _Nonnull)error;
+- (void)onRuntimePermissionGrantedWithGrantedPermissions:(NSArray<NSString *> * _Nullable)grantedPermissions;
+- (void)onRuntimePermissionDeniedWithDeniedPermissions:(NSArray<NSString *> * _Nullable)deniedPermissions;
+- (void)onNeverAskAgainRuntimePermissionWithNeverAskPermissions:(NSArray<NSString *> * _Nullable)neverAskPermissions;
+@end
+
 
 SWIFT_CLASS("_TtC13PlateauMobile8QBLogger")
 @interface QBLogger : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC13PlateauMobile13QBMockManager")
+@interface QBMockManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -6332,12 +6427,6 @@ SWIFT_CLASS("_TtC13PlateauMobile16QBNetworkManager")
 
 SWIFT_CLASS("_TtC13PlateauMobile18QBRenderingManager")
 @interface QBRenderingManager : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC13PlateauMobile17QBResourceManager")
-@interface QBResourceManager : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -6534,6 +6623,7 @@ SWIFT_PROTOCOL("_TtP13PlateauMobile15QMQuickProtocol_")
 - (NSString * _Nonnull)getMainCss SWIFT_WARN_UNUSED_RESULT;
 - (void)hostTriggerWithFunctionName:(NSString * _Nullable)functionName param:(NSDictionary<NSString *, id> * _Nullable)param callBack:(JSValue * _Nonnull)callBack context:(JSContext * _Nonnull)context pageNames:(NSArray<NSString *> * _Nonnull)pageNames;
 - (NSString * _Nonnull)getAppBaseUrl SWIFT_WARN_UNUSED_RESULT;
+- (void)addLogWithLevel:(NSString * _Nonnull)level source:(NSString * _Nonnull)source message:(NSString * _Nonnull)message;
 @end
 
 
@@ -6751,6 +6841,7 @@ SWIFT_CLASS("_TtC13PlateauMobile18QQrReaderViewModel")
 SWIFT_CLASS("_TtC13PlateauMobile19QRScannerController")
 @interface QRScannerController : UIViewController <QMNetworkDelegateProtocol, QMQuickProtocol, QMScreenDelegateProtocol, QRuntimePermissionListenerProtocol>
 - (NSString * _Nonnull)getAppBaseUrl SWIFT_WARN_UNUSED_RESULT;
+- (void)addLogWithLevel:(NSString * _Nonnull)level source:(NSString * _Nonnull)source message:(NSString * _Nonnull)message;
 - (void)saveToLocalStorageWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 - (NSString * _Nonnull)getFromLocalStorageWithKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (void)clearLocalStorage;
@@ -6978,6 +7069,14 @@ SWIFT_CLASS_NAMED("TransferObject")
 @end
 
 
+SWIFT_CLASS("_TtC13PlateauMobile14TransitionInfo")
+@interface TransitionInfo : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
 
 
 
@@ -7079,7 +7178,6 @@ SWIFT_CLASS("_TtC13PlateauMobile13VAutocomplete")
 - (void)clicked:(UITapGestureRecognizer * _Nonnull)sender;
 - (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
 - (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
-- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -7618,6 +7716,11 @@ SWIFT_CLASS("_TtC13PlateauMobile12VComboboxCss")
 @end
 
 
+SWIFT_CLASS("_TtC13PlateauMobile19VComboboxStyleProps")
+@interface VComboboxStyleProps : InputBaseStyleProps
+@end
+
+
 SWIFT_CLASS("_TtC13PlateauMobile18VComboboxViewModel")
 @interface VComboboxViewModel : InputBaseViewModel
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -8106,6 +8209,7 @@ SWIFT_CLASS("_TtC13PlateauMobile13VImgViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile17VInlineDatepicker")
 @interface VInlineDatepicker : InputBase
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -8749,7 +8853,6 @@ SWIFT_CLASS("_TtC13PlateauMobile13VRowViewModel")
 
 SWIFT_CLASS("_TtC13PlateauMobile7VSelect")
 @interface VSelect : InputBase
-- (void)onValidateCheckWithValidationResult:(NSDictionary<NSString *, id> * _Nonnull)validationResult;
 - (void)onPostRender;
 - (void)setupViewModelProperties;
 - (void)onViewWillAppear;
@@ -8759,6 +8862,7 @@ SWIFT_CLASS("_TtC13PlateauMobile7VSelect")
 - (void)outlineViewMask;
 - (void)setCorners;
 - (void)clicked:(UITapGestureRecognizer * _Nonnull)sender;
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -9417,19 +9521,17 @@ SWIFT_CLASS("_TtC13PlateauMobile10VTextField")
 @interface VTextField : InputBase
 - (void)focus;
 - (void)onValidateCheckWithValidationResult:(NSDictionary<NSString *, id> * _Nonnull)validationResult;
+- (void)applyStyleUpdates;
 - (void)applyUIUpdates;
 - (void)onViewWillAppear;
 - (void)applyErrorsWithErrorMessage:(id _Nullable)errorMessage;
 - (BOOL)textFieldShouldClear:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface VTextField (SWIFT_EXTENSION(PlateauMobile))
-- (void)setComponentColoredWithHasError:(BOOL)hasError;
-@end
 
 
 
@@ -9443,6 +9545,7 @@ SWIFT_CLASS("_TtC13PlateauMobile13VTextFieldCss")
 SWIFT_CLASS("_TtC13PlateauMobile20VTextFieldStyleProps")
 @interface VTextFieldStyleProps : InputBaseStyleProps
 @property (nonatomic, copy) NSString * _Nonnull innerActiveBorderAndLabelColor;
+@property (nonatomic, copy) NSString * _Nonnull textAlign;
 @end
 
 
@@ -9465,6 +9568,7 @@ SWIFT_CLASS("_TtC13PlateauMobile9VTextarea")
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textView;
 - (void)textViewDidEndEditing:(UITextView * _Nonnull)textView;
 - (void)textViewDidChange:(UITextView * _Nonnull)textView;
+- (void)setComponentColoredWithHasError:(BOOL)hasError;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -6,51 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		thLJG00mHcrHul/4ANSf8FoyU5g=
-		</data>
-		<key>Fonts/Arial Black.ttf</key>
-		<data>
-		XMAR53wfKYCLKFPhOaFSj9cjbak=
-		</data>
-		<key>Fonts/Arial Bold Italic.ttf</key>
-		<data>
-		/xAXdbKPGpWS/VzBH2csqle7rj0=
-		</data>
-		<key>Fonts/Arial Bold.ttf</key>
-		<data>
-		5Muq2wqbCrQiDOKW0hcKfelNE+g=
-		</data>
-		<key>Fonts/Arial Italic.ttf</key>
-		<data>
-		dU2k/WXvUpQtZooEngHXdpo59xs=
-		</data>
-		<key>Fonts/Arial Narrow Bold Italic.ttf</key>
-		<data>
-		yZuzeLLSk/1yjG01x61xOlI5ztM=
-		</data>
-		<key>Fonts/Arial Narrow Bold.ttf</key>
-		<data>
-		hKLeLpaar+gUIwnNhSz+Qd2r0uc=
-		</data>
-		<key>Fonts/Arial Narrow Italic.ttf</key>
-		<data>
-		cwwZH+KQOumH0fYhySjWiNSjOn8=
-		</data>
-		<key>Fonts/Arial Narrow.ttf</key>
-		<data>
-		2Shd5w5ZF7eNRmlYfBxJ/ntg6zA=
-		</data>
-		<key>Fonts/Arial Rounded Bold.ttf</key>
-		<data>
-		gFnjVBpCClovYNmcRtjMSlu6O48=
-		</data>
-		<key>Fonts/Arial Unicode.ttf</key>
-		<data>
-		ry4ZhtNhZidpaKF1raLAtXiXLuM=
-		</data>
-		<key>Fonts/Arial.ttf</key>
-		<data>
-		7T5ktvvXyDSJtKLhs9ZTloNZpJc=
+		lwN7yQd/4Y8mVNyrs41KYcs0zp0=
 		</data>
 		<key>Fonts/Inter-Black.ttf</key>
 		<data>
@@ -127,26 +83,6 @@
 		<key>Fonts/Lato-ThinItalic.ttf</key>
 		<data>
 		baFaoVgoupkP0vMn+uRm5WfeFAA=
-		</data>
-		<key>Fonts/Lostar.ttf</key>
-		<data>
-		wf8mtdi2T2cpuZckbY7GGZxl5r8=
-		</data>
-		<key>Fonts/Mark Simonson - Proxima Nova Bold.ttf</key>
-		<data>
-		jlkeDKi7jkAr+dQeBwUYaMwo1Lc=
-		</data>
-		<key>Fonts/Mark Simonson - Proxima Nova Medium.ttf</key>
-		<data>
-		ASA7AKBx/qQY+94Nlon7tV2l3PE=
-		</data>
-		<key>Fonts/Mark Simonson - Proxima Nova Semibold.ttf</key>
-		<data>
-		o0RDxbPWrYnZdV4YcYTdeL24oBw=
-		</data>
-		<key>Fonts/Mark Simonson - Proxima Nova.ttf</key>
-		<data>
-		hg6xLl0kkZh7ttTRZAbzhZmHPFU=
 		</data>
 		<key>Fonts/Montserrat-Black.ttf</key>
 		<data>
@@ -604,22 +540,6 @@
 		<data>
 		ao/+vUcCvhC24/yYDqzmFbFmNNk=
 		</data>
-		<key>Fonts/Segoe UI Bold Italic.ttf</key>
-		<data>
-		PU1OWCncAT9tTJPgPEOcWvo7GFM=
-		</data>
-		<key>Fonts/Segoe UI Bold.ttf</key>
-		<data>
-		srJupaNffC8QfTWPWEmFqhQhjE0=
-		</data>
-		<key>Fonts/Segoe UI Italic.ttf</key>
-		<data>
-		X8e+ZGLRWEUhf/pNYJ/ZBOTDb+o=
-		</data>
-		<key>Fonts/Segoe UI.ttf</key>
-		<data>
-		mV43z7oOPfmnFokaTPmgWzixGPk=
-		</data>
 		<key>Fonts/SourceSansPro-Black.ttf</key>
 		<data>
 		pM2Iu2TynBduAfK/MCUHn5Oqhpk=
@@ -668,25 +588,25 @@
 		<data>
 		QtdPTQhZ5ZdF2rJXhJMU1F8u6Ls=
 		</data>
-		<key>Fonts/Verdana.ttf</key>
-		<data>
-		D7Aiess9Tq/EfEbhToDAcWhiBro=
-		</data>
 		<key>Fonts/mdi-icons.ttf</key>
 		<data>
 		nlZxmz3v4RKK3I8xSowCb/+tnoA=
 		</data>
 		<key>Headers/PlateauMobile-Swift.h</key>
 		<data>
-		UTWjSUO6GiJal9D9/RZPPw6CMBo=
+		FySyaXwyP4+Mo6VJMn8xqqo6Lag=
 		</data>
 		<key>Headers/QuickBridge.h</key>
 		<data>
 		g/8yhw/NbcGlm0BF1MXZoysReew=
 		</data>
+		<key>InfiniteScrollLoading.json</key>
+		<data>
+		WfE9T269+agk+5KnoXsQOmTgtek=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		n6u2Q92L82g7jjgcQf9BOsUPHLQ=
+		bYsSXgTow6jq7ULn7jqeXnd5dQw=
 		</data>
 		<key>Mocks.sqlite3</key>
 		<data>
@@ -694,43 +614,43 @@
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		AQwmS3tCh/CpywArLq0O45WYW5A=
+		kn9CQ9H3JuKvELyQyB0Vt9GiW84=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		kMx0vRWrLpDxbGXV39ducCI03uA=
+		9Ea4q3lpukFwh205e/iHsdJFOgc=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ggxEfSIzx6cMYXtyeo9Vc6oCO9A=
+		ZIoe12Kr3tuDExnlJV7rDjktnNo=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		kMx0vRWrLpDxbGXV39ducCI03uA=
+		9Ea4q3lpukFwh205e/iHsdJFOgc=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+8ER2axkB58w9KUmD2ZPXsaiWl8=
+		GNMzct2eATojA9TEov+I25GLgk4=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		AQwmS3tCh/CpywArLq0O45WYW5A=
+		kn9CQ9H3JuKvELyQyB0Vt9GiW84=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		jeuAlYCo1AIz+v9TX+mYwZEly4M=
+		wUoY559zs0EJEyM69r6W54kpFns=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		S8h2O+iqK3GSxDlDhzVodetkoUI=
+		4qkxh/Sb+fdLXWsqSvvidCFVfNQ=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jeuAlYCo1AIz+v9TX+mYwZEly4M=
+		wUoY559zs0EJEyM69r6W54kpFns=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3OeRdxpaIR1034s0EeTrp7Dymw8=
+		zhKgxfEJTMFSnuPKCU92CrR+8Us=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -750,7 +670,7 @@
 		</data>
 		<key>QRSimulator.storyboardc/2N3-k6-DyG-view-QYk-ED-jYI.nib</key>
 		<data>
-		ZLYh296+yk9P8YIoiWNdhEsfBzM=
+		val8g61uBIcq9BH3N9SFrmn6J7I=
 		</data>
 		<key>QRSimulator.storyboardc/Info.plist</key>
 		<data>
@@ -762,7 +682,7 @@
 		</data>
 		<key>bridgets.js</key>
 		<data>
-		az8FWEfoTHj1b29S9Oqr/4JdC2s=
+		kdY8ueSl0jYliv7E96dRqaifWYQ=
 		</data>
 		<key>css/customcss.css</key>
 		<data>
@@ -783,84 +703,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4xAiY4jKNPmq/RXTUL/Q+jqclYUObz23nuFr7a0gE7c=
-			</data>
-		</dict>
-		<key>Fonts/Arial Black.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fX2zrZajE3PBQ3xqsUJm9mBUlVRMjmY1WLBHUhF0xC4=
-			</data>
-		</dict>
-		<key>Fonts/Arial Bold Italic.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			N0sBkKmEQ0MRDY+O0YGBF6RZGAPQIruyvRidY6aB5zE=
-			</data>
-		</dict>
-		<key>Fonts/Arial Bold.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1y2yH5JCrt1rkX2FSa1ZIXZrJNX40L7P2i/0xiCzwuA=
-			</data>
-		</dict>
-		<key>Fonts/Arial Italic.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zh0vGridtF+XlhAO7pYPVwKkDoTCJcK0jD7D6B0VP5g=
-			</data>
-		</dict>
-		<key>Fonts/Arial Narrow Bold Italic.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			A1z7i3dufOJ/TA6g3DyjzPhcjaXVlZXOzd8C3pZvuYU=
-			</data>
-		</dict>
-		<key>Fonts/Arial Narrow Bold.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/PNLMwAz4mwG6b1Ga+paPksvOScpcidTab632LJX7Vc=
-			</data>
-		</dict>
-		<key>Fonts/Arial Narrow Italic.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			89CCcCSTnwHxNGaMHSVwnlbFoIW9Vg4z3FmOhiA9Mdk=
-			</data>
-		</dict>
-		<key>Fonts/Arial Narrow.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nh2IHE5DtRho9eI16loSyDjiPMjfYnffGjyU4ViZmCY=
-			</data>
-		</dict>
-		<key>Fonts/Arial Rounded Bold.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			p06nHDZvFcgfnOAKdXzvuTjNohwNMuUQN9mgOOXrwUs=
-			</data>
-		</dict>
-		<key>Fonts/Arial Unicode.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			h2ryzUhUZE5/Pn/rL2iJl/2zNDxt9mk2ESCcnftHzOw=
-			</data>
-		</dict>
-		<key>Fonts/Arial.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Ull5giWRo0R8/EnZQ9b3aDUI4lVDQHhxwO2P7QX9K9k=
+			VJCgcUu0yXWtPF0mNc1E6R+JvrlMGN55PwTzdakaz68=
 			</data>
 		</dict>
 		<key>Fonts/Inter-Black.ttf</key>
@@ -994,41 +837,6 @@
 			<key>hash2</key>
 			<data>
 			vcxr+Fb0Y/ABjFSXDfh/+kCXQAVyL43EPFkMCZQqb68=
-			</data>
-		</dict>
-		<key>Fonts/Lostar.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			J6ZfpacEDPht+B2SEElWBZj7Lk5PHcdBTWF5F4K3l04=
-			</data>
-		</dict>
-		<key>Fonts/Mark Simonson - Proxima Nova Bold.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MXFYtyDc6dJy2ySJ4W/3UsbZNCfW5s7ZGLFAdtwJp9c=
-			</data>
-		</dict>
-		<key>Fonts/Mark Simonson - Proxima Nova Medium.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DqGeDpZWa28xsDRovD4GAgiTx8zfHeBNdQz5Sx4eOhE=
-			</data>
-		</dict>
-		<key>Fonts/Mark Simonson - Proxima Nova Semibold.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Op7p9gj7U+/2rPkZKr0BKntACLyatP6kY9YiHSlMeXk=
-			</data>
-		</dict>
-		<key>Fonts/Mark Simonson - Proxima Nova.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WwQvmJeU9x7tZoUx7ekc4OSODXSU3EE84hCRsHa0KE0=
 			</data>
 		</dict>
 		<key>Fonts/Montserrat-Black.ttf</key>
@@ -1829,34 +1637,6 @@
 			vEB7z8Xv3lVHgTLk+51zFyRtitLLCQAp2U7BDbwNrgA=
 			</data>
 		</dict>
-		<key>Fonts/Segoe UI Bold Italic.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			7WSFL/OElksCRansHCq3NT2q7aRy/LcE7x1/6AEFL1Q=
-			</data>
-		</dict>
-		<key>Fonts/Segoe UI Bold.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			MITLOcDyTX36a1dgFOx10MO56FLhpUXqqWJT4IfwKis=
-			</data>
-		</dict>
-		<key>Fonts/Segoe UI Italic.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			TVx3+RAkTQMYA3kME/SA6BRwG6Z2YvaHP2XKp2BuViE=
-			</data>
-		</dict>
-		<key>Fonts/Segoe UI.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			N0XDR9Fo3ZOJca7Vc6shQLanZvZYxPNT8G3cBel2/3o=
-			</data>
-		</dict>
 		<key>Fonts/SourceSansPro-Black.ttf</key>
 		<dict>
 			<key>hash2</key>
@@ -1941,13 +1721,6 @@
 			lYGhMJbXevbpZM0qltgvsAZrh+ra99ngQMZOJ2ULR7Q=
 			</data>
 		</dict>
-		<key>Fonts/Verdana.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WDnF9eVQ47HHBZoRuL4AZO5hvz6ybcaq5/P9VJFTOuw=
-			</data>
-		</dict>
 		<key>Fonts/mdi-icons.ttf</key>
 		<dict>
 			<key>hash2</key>
@@ -1959,7 +1732,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uo9jgvPPYxZoTzLEqag0Qqwt+PgnD2HsLFkCl1+kub4=
+			XliPEnO92zBgGWqfoOV2CnsEmbAhfi10NTE+yz/C8Y8=
 			</data>
 		</dict>
 		<key>Headers/QuickBridge.h</key>
@@ -1967,6 +1740,13 @@
 			<key>hash2</key>
 			<data>
 			OQyVt+SW0V3TQXKNJPOAmgSNBSQTVIBOx3F6Fb4Om+I=
+			</data>
+		</dict>
+		<key>InfiniteScrollLoading.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ME1HVJPP5ucaGEvRiCbX8szd4mMVLZRyI0BOMezRYwk=
 			</data>
 		</dict>
 		<key>Mocks.sqlite3</key>
@@ -1980,70 +1760,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t3b7Gd6hyUMmtWT9TffHPFWhC97pXQ+ZB6UiERVqwdA=
+			JwPuz1w1oCH1xg6Tev+z0rxyKN8jytsb/nSA9IWAEw4=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AHPL8NEx+laVpW+X4rd5ULegCk5jY3I/G+CVVbasldk=
+			O1vjbDYubcQDFADmsIY94p1wEHx3h5S59K+9VUS5rfI=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jZMI8xLwDBccV9kreTwHyoI/435B+P1O5gNH+72I5e0=
+			cmanSZFnMknw1Ge3ffcqUq4SqwRRAIgCdjwqTceLWMA=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AHPL8NEx+laVpW+X4rd5ULegCk5jY3I/G+CVVbasldk=
+			O1vjbDYubcQDFADmsIY94p1wEHx3h5S59K+9VUS5rfI=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K1rY7GNkq7E0wZetelNjAPAUHsvdW6zImiN9W8+jtlU=
+			sqsFlvr1MGbGvxhb7tk97oK7Y3Y9J/Xzk5y50ZNdFqI=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t3b7Gd6hyUMmtWT9TffHPFWhC97pXQ+ZB6UiERVqwdA=
+			JwPuz1w1oCH1xg6Tev+z0rxyKN8jytsb/nSA9IWAEw4=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KPB1eWXaNBe7OXIl8cLhFMTA/4C8R8sPHJBWt1TasBA=
+			I7zcjz0GMJBoT0VPeTBsXg8fBcAs4XmRLJugXLOmE0Q=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eJiaih6sbihMwh1/b8dJFBJY4E8crLbd5Q7xjPtffmc=
+			XkKZT1s0T4m8fzZVi+W1h8F2lBMsnzEIBISDrOh0mOc=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KPB1eWXaNBe7OXIl8cLhFMTA/4C8R8sPHJBWt1TasBA=
+			I7zcjz0GMJBoT0VPeTBsXg8fBcAs4XmRLJugXLOmE0Q=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UtK7/WbkcK2jvipdo1UsrFuIzhjSxMbmGTaIXt5FZAY=
+			uqAcgaIrA67y+YDGI5cDJUorJEusoqRV8uMfyNnKbRE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -2078,7 +1858,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HEimXsniPQGYtW5Y9Rtw9msRaY2Pv+UcSLmgp31E95c=
+			fVez428sga7nAlXun+EVmBklmsjxhLtgKH5XnVryREs=
 			</data>
 		</dict>
 		<key>QRSimulator.storyboardc/Info.plist</key>
@@ -2099,7 +1879,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			twfnHsE0M7NHTBvn2dUSxi0qTxGNqgd5iRLLvaI6a/A=
+			2vsc7cvGoTRGSvoJ7fioCoWtSxncejsl6JA74yZgWgo=
 			</data>
 		</dict>
 		<key>css/customcss.css</key>
