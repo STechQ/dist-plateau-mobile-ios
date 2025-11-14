@@ -4,9 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppAuthCore_Privacy.bundle/Info.plist</key>
+		<data>
+		NsgYkUyIY5+3Hu9B96+JaEfRC7s=
+		</data>
+		<key>AppAuthCore_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		MCDRptixYfA+qALBX9b4uxq3rwo=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		lwN7yQd/4Y8mVNyrs41KYcs0zp0=
+		hyaeS9xICKci62dC20ZrlZIv5sA=
+		</data>
+		<key>DGCharts.bundle/Info.plist</key>
+		<data>
+		UpYLgSXmeBekubUEeUZPFwv4G5I=
+		</data>
+		<key>DGCharts.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		i3YpomTpJHpRGpdt+oGaesmknBg=
 		</data>
 		<key>Fonts/Inter-Black.ttf</key>
 		<data>
@@ -594,7 +610,7 @@
 		</data>
 		<key>Headers/PlateauMobile-Swift.h</key>
 		<data>
-		FySyaXwyP4+Mo6VJMn8xqqo6Lag=
+		yYycCh3CYl6tvahfJ+a93MMRgKQ=
 		</data>
 		<key>Headers/QuickBridge.h</key>
 		<data>
@@ -606,51 +622,198 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bYsSXgTow6jq7ULn7jqeXnd5dQw=
+		VFQWovLPhMlndQ8RFILsMzPbguw=
 		</data>
+		<key>LottiePrivacyInfo.bundle/Info.plist</key>
+		<data>
+		1rm7aM+gyyJf7UW4SWcb2iv3aTQ=
+		</data>
+		<key>LottiePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		9slhmTZYKDmos4efk+3YOXYOQXo=
+		</data>
+		<key>MantisResources.bundle/Info.plist</key>
+		<data>
+		mIg+UecXR5CkjGUT8ZBbjw4vvuQ=
+		</data>
+		<key>MantisResources.bundle/ar.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y0B+EjvaFMPvMF8hIxhRLBhipV4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/de.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YLt8ckfidcNzl9wOojMpDeYtUHg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/en.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uP67UMID0uDP7gbG5SHIIJSR9u4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/es.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4VfNfK2Kqf1mKVkSnu03qSpPlsU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/fr.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tgdZpj12ZIKN11poadF4xyj9NX8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/it.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n9NIE+XAr9nmVr9+vJNFapvISBI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/ja.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qSFY9hLwde+3Y5NgQF9qgZ4lUmg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/ko-KR.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PDocdQHvA9Fd0Fi30U/8DZRl9yk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/ko.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PDocdQHvA9Fd0Fi30U/8DZRl9yk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/nl.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uj8G3KMgLXaA/UaiDLVGYB/Zrkk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/pt-PT.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			l7aUMZ7ZEUsZUyTKiYvnScHuyIc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/ru.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			y7AGK6MMUaPgPHIacUvFZFVBoT4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/tr.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			84l8JSL/QaUzHnZ/SnVHmjO4Hbg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/zh-Hans.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Tg5fUrvcjp1EMnOfniw89BiXauc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/zh-Hant.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			O8ljmBrl7IskRpZi5wyWg98xl+c=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Mocks.sqlite3</key>
 		<data>
 		Ar6HaglmwKDzhyuwQCQFFDaGe14=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		kn9CQ9H3JuKvELyQyB0Vt9GiW84=
+		SPO5W9kRJzgQUmzCPTUsQ1njjCw=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		9Ea4q3lpukFwh205e/iHsdJFOgc=
+		nMGRMXefXuYE0+HAWPa2SvXq2xs=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ZIoe12Kr3tuDExnlJV7rDjktnNo=
+		bAOzBypyrhtDQY3C0dslWwN72RM=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		9Ea4q3lpukFwh205e/iHsdJFOgc=
+		nMGRMXefXuYE0+HAWPa2SvXq2xs=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GNMzct2eATojA9TEov+I25GLgk4=
+		nHeuvCqYfbQ3yIzf7+CpdIH0PaA=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		kn9CQ9H3JuKvELyQyB0Vt9GiW84=
+		SPO5W9kRJzgQUmzCPTUsQ1njjCw=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		wUoY559zs0EJEyM69r6W54kpFns=
+		S4ARAPH206tm9AMc0/rxnkWeukw=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		4qkxh/Sb+fdLXWsqSvvidCFVfNQ=
+		/djfQm9b+IDbyij8FLgATuWVIzQ=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		wUoY559zs0EJEyM69r6W54kpFns=
+		S4ARAPH206tm9AMc0/rxnkWeukw=
 		</data>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zhKgxfEJTMFSnuPKCU92CrR+8Us=
+		jIqdtjvyWDx3w97Hsf8ARZG3xXQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -670,7 +833,7 @@
 		</data>
 		<key>QRSimulator.storyboardc/2N3-k6-DyG-view-QYk-ED-jYI.nib</key>
 		<data>
-		val8g61uBIcq9BH3N9SFrmn6J7I=
+		ZLYh296+yk9P8YIoiWNdhEsfBzM=
 		</data>
 		<key>QRSimulator.storyboardc/Info.plist</key>
 		<data>
@@ -679,6 +842,14 @@
 		<key>QRSimulator.storyboardc/QRScannerController.nib</key>
 		<data>
 		jbYb9z3gqCyH7GO2h75Mzs4JuQQ=
+		</data>
+		<key>Starscream_Privacy.bundle/Info.plist</key>
+		<data>
+		aI/6Vu2NjP1kz9d/C78e3pHwHQY=
+		</data>
+		<key>Starscream_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		J3jCDET/Yn1lAQbrw44v61PrV7c=
 		</data>
 		<key>bridgets.js</key>
 		<data>
@@ -699,11 +870,39 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppAuthCore_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ETCHwxloDGnnvcXa4PU20QIJKUTE/hsP0wJ4pW4VlZw=
+			</data>
+		</dict>
+		<key>AppAuthCore_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Wt6WL6rqHt273QbEz4qHLOxVT2TFWgDgATYATTeOHO0=
+			</data>
+		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VJCgcUu0yXWtPF0mNc1E6R+JvrlMGN55PwTzdakaz68=
+			7O+8+2wHVHhZtDKyNsiI4C5TJMomBk5mkv9z8GJbzHk=
+			</data>
+		</dict>
+		<key>DGCharts.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			N1tNTWFG/JWujInqD7v/rO5YUYzhG6YQETci3yWQNV4=
+			</data>
+		</dict>
+		<key>DGCharts.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jWXQtDoSYs/inoM5bACz25T7Eg1E0RiNknNB8UpsIjw=
 			</data>
 		</dict>
 		<key>Fonts/Inter-Black.ttf</key>
@@ -1732,7 +1931,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XliPEnO92zBgGWqfoOV2CnsEmbAhfi10NTE+yz/C8Y8=
+			ChEFpy/4I2Zmg/OiPie1y5ClNMRBrJKKS/rx21oiXrA=
 			</data>
 		</dict>
 		<key>Headers/QuickBridge.h</key>
@@ -1749,6 +1948,162 @@
 			ME1HVJPP5ucaGEvRiCbX8szd4mMVLZRyI0BOMezRYwk=
 			</data>
 		</dict>
+		<key>LottiePrivacyInfo.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			i8RshyqT989B9/RY9+NLmOBskobATG1yhPvB3tt6Q5o=
+			</data>
+		</dict>
+		<key>LottiePrivacyInfo.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ENpn8heCTwGSiOwyirq8KQqwOZxS6b53ok1JQzkTfaI=
+			</data>
+		</dict>
+		<key>MantisResources.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hQ6MXOqcBQ0jLEbFQQcSQYpX8Vhg9QCn87d93AEylYs=
+			</data>
+		</dict>
+		<key>MantisResources.bundle/ar.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tQmf1L7mCbQrv7Wj34DQ4lGcQ0NJkML5FbLWNWF3uDw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/de.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bdQSKqpllYCVPaImUzeNE+GTW7HeDIBiy8IFIJtbcjU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/en.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oPHkvFKgTECjwaanTRm4akHTDlxhAdruaRzM814g1Lw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/es.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uz09mmvV0aT0itadhpU3fhSbjw6nj5PXyJXcKd/tMNw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/fr.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jsIqoEyH9/IjXJ+jDc/Ig7xxr792cYdg7Dl/mjyaj/A=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/it.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cKT/nFEg/g+nmYI0PnekTT31Z6yjKuDS8YkUTluodaE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/ja.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Mk12LpoporSndqGMHbcpONHu8Ky+5ILCTBFHwzJCGy0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/ko-KR.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6/VILJ9eHWwe0cnCx2cUxqLQI0+9ie7dutYAJWlP0Uk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/ko.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6/VILJ9eHWwe0cnCx2cUxqLQI0+9ie7dutYAJWlP0Uk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/nl.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FC2pVwjLGYTvZWwGvhIVi1XeLIMHFH2gihZMPxuuogI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/pt-PT.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MgJX3mAUZidQNJMuKPtfJlsoKKgFffcxH4CFPAopCzE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/ru.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			eCBWq+VeBxYbRU4z587IAzeDpRrAeK3V4JkuXK8sMwU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/tr.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BEYwmh3xeu7WI9s7x6AGgLvcT04GDHC/4K9vLfWBHvs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/zh-Hans.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HQ+/sNKzWspzGh2OQG0gp73+m2zFttf91d3XtSQvRv8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>MantisResources.bundle/zh-Hant.lproj/MantisLocalizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/UEim35SBQoq96txmjctAjFC8EveLXxxuAcKXdsZEJM=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Mocks.sqlite3</key>
 		<dict>
 			<key>hash2</key>
@@ -1760,70 +2115,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JwPuz1w1oCH1xg6Tev+z0rxyKN8jytsb/nSA9IWAEw4=
+			8y0BiTyyN8HaEUXb6VswCXfzoNEJ0Oin8DpbaXHlgis=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O1vjbDYubcQDFADmsIY94p1wEHx3h5S59K+9VUS5rfI=
+			sFsYCyzgTJ1ihS0k9ybmsWs5q8u7rG7aCOUA8RXBmCY=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cmanSZFnMknw1Ge3ffcqUq4SqwRRAIgCdjwqTceLWMA=
+			d0d53vdHbxiMwKPWS4Vt4gpST4GVArkKy9IuIR2DflY=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O1vjbDYubcQDFADmsIY94p1wEHx3h5S59K+9VUS5rfI=
+			sFsYCyzgTJ1ihS0k9ybmsWs5q8u7rG7aCOUA8RXBmCY=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sqsFlvr1MGbGvxhb7tk97oK7Y3Y9J/Xzk5y50ZNdFqI=
+			GVmhXf6JQoVPgI++bEmoM/3vAEf+ajqrnXwf2JPFEPY=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JwPuz1w1oCH1xg6Tev+z0rxyKN8jytsb/nSA9IWAEw4=
+			8y0BiTyyN8HaEUXb6VswCXfzoNEJ0Oin8DpbaXHlgis=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I7zcjz0GMJBoT0VPeTBsXg8fBcAs4XmRLJugXLOmE0Q=
+			aeQDiDAP4TF48c5UsAgIHdeyNgu73BCPl1P4dhDG80I=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XkKZT1s0T4m8fzZVi+W1h8F2lBMsnzEIBISDrOh0mOc=
+			qmVGvvPn7BMOq21B6JKMIJtVUMVBzCVuCGEVxhU5H1I=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I7zcjz0GMJBoT0VPeTBsXg8fBcAs4XmRLJugXLOmE0Q=
+			aeQDiDAP4TF48c5UsAgIHdeyNgu73BCPl1P4dhDG80I=
 			</data>
 		</dict>
 		<key>Modules/PlateauMobile.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uqAcgaIrA67y+YDGI5cDJUorJEusoqRV8uMfyNnKbRE=
+			hmXbQCv5YQxoEVG9FSjs9uthkVDmoBeOtcpyYfgbIKk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -1858,7 +2213,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fVez428sga7nAlXun+EVmBklmsjxhLtgKH5XnVryREs=
+			HEimXsniPQGYtW5Y9Rtw9msRaY2Pv+UcSLmgp31E95c=
 			</data>
 		</dict>
 		<key>QRSimulator.storyboardc/Info.plist</key>
@@ -1873,6 +2228,20 @@
 			<key>hash2</key>
 			<data>
 			afC6k5PaSJ6/VPUEp1i1FrYhlzHKTIvm6KryIX0lH58=
+			</data>
+		</dict>
+		<key>Starscream_Privacy.bundle/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3AuUU3tmQrkDqq/PplVZmAA6KqF6Wz72dB2BDGrp+K8=
+			</data>
+		</dict>
+		<key>Starscream_Privacy.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Uoqz/KkQ0qwvPvJW1epMIycwOnpKXvuSNph/MBjjEfM=
 			</data>
 		</dict>
 		<key>bridgets.js</key>
