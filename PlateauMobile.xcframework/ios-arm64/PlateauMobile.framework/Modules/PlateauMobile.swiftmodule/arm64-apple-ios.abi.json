@@ -43909,7 +43909,8 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -172492,6 +172493,7 @@
         "moduleName": "PlateauMobile",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:@M@PlateauMobile@objc(cs)BaseStyleProps",
@@ -224317,14 +224319,21 @@
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickBridge\/Bridge\/QuickBridge.swift",
       "kind": "StringLiteral",
-      "offset": 88017,
+      "offset": 26865,
+      "length": 56,
+      "value": "\"https:\/\/otogb7m8y8f23d18ym35w7.z6.web.core.windows.net\""
+    },
+    {
+      "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickBridge\/Bridge\/QuickBridge.swift",
+      "kind": "StringLiteral",
+      "offset": 88075,
       "length": 14,
       "value": "\"PageRenderer\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickBridge\/Bridge\/QuickBridge.swift",
       "kind": "StringLiteral",
-      "offset": 95095,
+      "offset": 95153,
       "length": 2,
       "value": "\"\""
     },
@@ -240088,161 +240097,161 @@
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1616,
+      "offset": 1629,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1654,
+      "offset": 1667,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1691,
+      "offset": 1704,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1729,
+      "offset": 1742,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1762,
+      "offset": 1775,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1801,
+      "offset": 1814,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1842,
+      "offset": 1855,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1881,
+      "offset": 1894,
       "length": 6,
       "value": "\"12px\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1923,
+      "offset": 1936,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 1970,
+      "offset": 1983,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 2018,
+      "offset": 2031,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 2066,
+      "offset": 2079,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2287,
+      "offset": 2300,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 2372,
+      "offset": 2385,
       "length": 22,
       "value": "\"??????????????????  \""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 2397,
+      "offset": 2410,
       "length": 20,
       "value": "\"didSet text called\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 2691,
+      "offset": 2704,
       "length": 27,
       "value": "\"Can not converted to text\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 2856,
+      "offset": 2869,
       "length": 22,
       "value": "\"??????????????????  \""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 2881,
+      "offset": 2894,
       "length": 26,
       "value": "\"didSet textString called\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 3206,
+      "offset": 3219,
       "length": 22,
       "value": "\"??????????????????  \""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 3231,
+      "offset": 3244,
       "length": 21,
       "value": "\"textOverflow called\""
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "FloatLiteral",
-      "offset": 3460,
+      "offset": 3473,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "FloatLiteral",
-      "offset": 3602,
+      "offset": 3615,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/alperenerdem\/Desktop\/PlateauStudio\/PlateauMobile\/QuickComponents\/Components\/Label\/QLabel.swift",
       "kind": "StringLiteral",
-      "offset": 3639,
+      "offset": 3652,
       "length": 2,
       "value": "\"\""
     },

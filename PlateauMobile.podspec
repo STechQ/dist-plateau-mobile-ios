@@ -1,6 +1,6 @@
  Pod::Spec.new do |s|
  s.name          = "PlateauMobile"            
- s.version       = "1.0.15"
+ s.version       = "1.0.16"
  s.summary       = "Plateau Mobile framework"
  s.homepage      = "https://github.com/STechQ"
  s.description   = "Description: Plateau Mobile framework package "

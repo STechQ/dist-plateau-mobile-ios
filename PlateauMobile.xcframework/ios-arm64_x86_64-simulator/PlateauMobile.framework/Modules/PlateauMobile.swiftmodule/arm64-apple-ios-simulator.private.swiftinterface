@@ -4234,7 +4234,7 @@ public enum DataType : Swift.String {
   @objc required dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class QLabelStyleProps : PlateauMobile.BaseStyleProps {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class QLabelStyleProps : PlateauMobile.BaseStyleProps {
   @objc public var fontWeight: Swift.Int
   @objc public var fontColor: Swift.String
   @objc public var fontSize: Swift.String
