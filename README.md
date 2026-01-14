@@ -39,6 +39,8 @@ This document describes how to integrate the **PlateauMobile SDK** into an iOS p
     github "danielgindi/Charts" "5.1.0"
     github "guoyingtao/Mantis" "v2.23.0"
     github "openid/AppAuth-iOS" "1.7.6"
+    github "SDWebImage/SDWebImage" "5.21.0"
+    github "SDWebImage/SDWebImageSVGCoder" "1.7.0"
     ```
     
 > ℹ️ **Note**
