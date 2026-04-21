@@ -21,7 +21,7 @@ let package = Package(
         .binaryTarget(
             name: "Yoga",
             url: "https://github.com/STechQ/dist-plateau-mobile-ios/releases/download/1.0.17/yoga.xcframework.zip",
-            checksum: "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+            checksum: "eed3969061d998875a1f9c839b21bb249a908f10fa973ab320508b6b1ea60ee9"
         ),
         .binaryTarget(
             name: "YogaKit",
