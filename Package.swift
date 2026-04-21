@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "PlateauMobile",
-            targets: ["PlateauMobile"]
+            targets: ["PlateauMobile", "Yoga", "YogaKit"]
         ),
     ],
     targets: [
