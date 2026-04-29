@@ -54,7 +54,7 @@ let package = Package(
         .binaryTarget(
             name: "PlateauMobile",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/plateaumobile-binaries/Framework/PlateauMobile.xcframework.zip",
-            checksum: "31552bb3fc1ecaa2ea7e0738d14932ac984947b4a105439e3952bbc01dc7921b"
+            checksum: "19a2efc7aea6744f00bda216808eca43b210c157c7440a9772fb66f429e3f615"
         ),
         .binaryTarget(
             name: "yoga",
