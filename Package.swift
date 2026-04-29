@@ -54,17 +54,17 @@ let package = Package(
         .binaryTarget(
             name: "PlateauMobileBinary",
             url: "https://github.com/STechQ/dist-plateau-mobile-ios/releases/download/1.0.19/PlateauMobile.xcframework.zip",
-            checksum: "31552bb3fc1ecaa2ea7e0738d14932ac984947b4a105439e3952bbc01dc7921b"
+            checksum: "19a2efc7aea6744f00bda216808eca43b210c157c7440a9772fb66f429e3f615"
         ),
         .binaryTarget(
             name: "YogaBinary",
             url: "https://github.com/STechQ/dist-plateau-mobile-ios/releases/download/1.0.19/yoga.xcframework.zip",
-            checksum: "eed3969061d998875a1f9c839b21bb249a908f10fa973ab320508b6b1ea60ee9"
+            checksum: "a2d81f5213c039980b4f7714a1058b8ac2668e12c0d6ccf226ef2ae8dbc9c8b3"
         ),
         .binaryTarget(
             name: "YogaKitBinary",
             url: "https://github.com/STechQ/dist-plateau-mobile-ios/releases/download/1.0.19/YogaKit.xcframework.zip",
-            checksum: "8379dc61392cb88ad11fb5e833d9605e8f86799503d61271e80488915fbbcc27"
+            checksum: "a8bb50e4422dfd22b46145e4bcdae0926d50e12b5ca0f68eb2778212880c418c"
         ),
         .target(
             name: "PlateauMobile",
