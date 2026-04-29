@@ -9,15 +9,15 @@ let package = Package(
     products: [
         .library(
             name: "PlateauMobile",
-            targets: ["PlateauMobile"]
+            targets: ["PlateauMobileWrapper"]
         ),
         .library(
             name: "Yoga",
-            targets: ["Yoga"]
+            targets: ["yoga"]
         ),
         .library(
             name: "YogaKit",
-            targets: ["YogaKit"]
+            targets: ["YogaKitWrapper"]
         )
     ],
     dependencies: [
@@ -52,67 +52,39 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "PlateauMobileBinary",
+            name: "PlateauMobile",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/plateaumobile-binaries/Framework/PlateauMobile.xcframework.zip",
             checksum: "31552bb3fc1ecaa2ea7e0738d14932ac984947b4a105439e3952bbc01dc7921b"
         ),
         .binaryTarget(
-            name: "YogaBinary",
+            name: "yoga",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/yoga-binaries/Framework/yoga.xcframework.zip",
             checksum: "eed3969061d998875a1f9c839b21bb249a908f10fa973ab320508b6b1ea60ee9"
         ),
         .binaryTarget(
-            name: "YogaKitBinary",
+            name: "YogaKit",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/yogakit-binaries/Framework/YogaKit.xcframework.zip",
             checksum: "8379dc61392cb88ad11fb5e833d9605e8f86799503d61271e80488915fbbcc27"
         ),
         .target(
-            name: "PlateauMobile",
+            name: "PlateauMobileWrapper",
             dependencies: [
-                "PlateauMobileBinary",
-                .product(
-                    name: "Starscream",
-                    package: "Starscream"
-                ),
-                .product(
-                    name: "Lottie",
-                    package: "lottie-ios"
-                ),
-                .product(
-                    name: "DGCharts",
-                    package: "Charts"
-                ),
-                .product(
-                    name: "Mantis",
-                    package: "Mantis"
-                ),
-                .product(
-                    name: "AppAuth",
-                    package: "AppAuth-iOS"
-                ),
-                .product(
-                    name: "SDWebImage",
-                    package: "SDWebImage"
-                ),
-                .product(
-                    name: "SDWebImageSVGCoder",
-                    package: "SDWebImageSVGCoder"
-                )
+                "PlateauMobile",
+                .product(name: "Starscream", package: "Starscream"),
+                .product(name: "Lottie", package: "lottie-ios"),
+                .product(name: "DGCharts", package: "Charts"),
+                .product(name: "Mantis", package: "Mantis"),
+                .product(name: "AppAuth", package: "AppAuth-iOS"),
+                .product(name: "SDWebImage", package: "SDWebImage"),
+                .product(name: "SDWebImageSVGCoder", package: "SDWebImageSVGCoder")
             ],
             path: "Sources/PlateauMobile"
         ),
         .target(
-            name: "Yoga",
+            name: "YogaKitWrapper",
             dependencies: [
-                "YogaBinary"
-            ],
-            path: "Sources/Yoga"
-        ),
-        .target(
-            name: "YogaKit",
-            dependencies: [
-                "YogaKitBinary",
-                "Yoga"
+                "YogaKit",
+                "yoga"
             ],
             path: "Sources/YogaKit"
         )

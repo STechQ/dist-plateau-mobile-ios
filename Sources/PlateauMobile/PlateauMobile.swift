@@ -4,7 +4,7 @@
 import Foundation
 
 // Re-export bağımlılıklar
-@_exported import PlateauMobileBinary
+@_exported import PlateauMobile
 @_exported import Starscream
 @_exported import Lottie
 @_exported import Charts
