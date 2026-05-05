@@ -7,7 +7,7 @@ import Foundation
 @_exported import PlateauMobile
 @_exported import Starscream
 @_exported import Lottie
-@_exported import Charts
+@_exported import DGCharts
 @_exported import Mantis
 @_exported import AppAuth
 @_exported import SDWebImage
