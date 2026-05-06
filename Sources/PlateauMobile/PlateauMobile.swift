@@ -14,5 +14,5 @@ import Foundation
 @_exported import SDWebImageSVGCoder
 
 public struct PlateauMobileVersion {
-    public static let version = "1.0.19"
+    public static let version = "1.5.1"
 }
