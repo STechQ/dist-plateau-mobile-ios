@@ -2,8 +2,9 @@
 
 import Foundation
 
+@_exported import YogaKit
 @_exported import yoga
 
-public struct YogaVersion {
+public struct YogaKitVersion {
     public static let version = "3.2.0"
 }
