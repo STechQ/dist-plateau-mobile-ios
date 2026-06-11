@@ -20,6 +20,36 @@ let package = Package(
             targets: ["YogaKitWrapper"]
         )
     ],
+    dependencies: [
+        .package(
+            url: "https://github.com/airbnb/lottie-spm.git",
+            from: "4.5.0"
+        ),
+        .package(
+            url: "https://github.com/SDWebImage/SDWebImage.git",
+            from: "5.21.0"
+        ),
+        .package(
+            url: "https://github.com/danielgindi/Charts.git",
+            from: "5.1.0"
+        ),
+        .package(
+            url: "https://github.com/daltoniam/Starscream.git",
+            from: "4.0.6"
+        ),
+        .package(
+            url: "https://github.com/guoyingtao/Mantis.git",
+            from: "2.23.0"
+        ),
+        .package(
+            url: "https://github.com/openid/AppAuth-iOS.git",
+            from: "1.7.6"
+        ),
+        .package(
+            url: "https://github.com/SDWebImage/SDWebImageSVGCoder.git",
+            from: "1.7.0"
+        )
+    ],
     targets: [
         // MARK: - PlateauMobile
         .binaryTarget(
@@ -40,55 +70,18 @@ let package = Package(
             checksum: "8379dc61392cb88ad11fb5e833d9605e8f86799503d61271e80488915fbbcc27"
         ),
 
-        // MARK: - 3rd Party Binary Dependencies
-        .binaryTarget(
-            name: "Starscream",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/binaries/Starscream.xcframework.zip",
-            checksum: "206c09f3b5277373985790eafd2fcac0a2f5d82bd1162da40b4d546fc2d89d10"
-        ),
-        .binaryTarget(
-            name: "Lottie",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/binaries/Lottie.xcframework.zip",
-            checksum: "78cff695a1baa0ff02071bc344b41b2f6f5f32fdbf212aa2c9f18e0785b19dfe"
-        ),
-        .binaryTarget(
-            name: "DGCharts",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/binaries/DGCharts.xcframework.zip",
-            checksum: "58d922ba334f14e7c7d3f81e6cd5ab31df481b03a8da22644e518f85f9a769a5"
-        ),
-        .binaryTarget(
-            name: "Mantis",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/binaries/Mantis.xcframework.zip",
-            checksum: "941146da105eef6239d0b01abaf86437607d47ba1c01ef7bff477397bf5886cb"
-        ),
-        .binaryTarget(
-            name: "AppAuth",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/binaries/AppAuth.xcframework.zip",
-            checksum: "08f195e2dc023e381a34cf96b81cdffa76c508a866f5ef02cd087d0922b34b6e"
-        ),
-        .binaryTarget(
-            name: "SDWebImage",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/binaries/SDWebImage.xcframework.zip",
-            checksum: "696864afab823492bd5a7939c671d77c0bc98c164c5171fd7f78eb980393cfe0"
-        ),
-        .binaryTarget(
-            name: "SDWebImageSVGCoder",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/binaries/SDWebImageSVGCoder.xcframework.zip",
-            checksum: "5d5418b8cadc05a945be62267de7fc83befa249a983bb514583653f316601ab3"
-        ),
-
         // MARK: - Wrapper Targets
         .target(
             name: "PlateauMobileWrapper",
             dependencies: [
                 "PlateauMobile",
-                "Starscream",
-                "Lottie",
-                "DGCharts",
-                "Mantis",
-                "AppAuth",
-                "SDWebImage",
-                "SDWebImageSVGCoder"
+                .product(name: "Starscream", package: "Starscream"),
+                .product(name: "Lottie", package: "lottie-spm"),
+                .product(name: "DGCharts", package: "Charts"),
+                .product(name: "Mantis", package: "Mantis"),
+                .product(name: "AppAuth", package: "AppAuth-iOS"),
+                .product(name: "SDWebImage", package: "SDWebImage"),
+                .product(name: "SDWebImageSVGCoder", package: "SDWebImageSVGCoder")
             ],
             path: "Sources/PlateauMobile"
         ),
