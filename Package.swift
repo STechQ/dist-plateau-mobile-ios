@@ -9,72 +9,46 @@ let package = Package(
     products: [
         .library(
             name: "PlateauMobile",
-            targets: ["PlateauMobileWrapper"]
-        ),
-        .library(
-            name: "Yoga",
-            targets: ["yoga"]
-        ),
-        .library(
-            name: "YogaKit",
-            targets: ["YogaKitWrapper"]
+            targets: [
+                "PlateauMobile",
+                "YogaKit",
+                "yoga",
+                "PlateauMobileDependencies",
+                "YogaKitDependencies"
+            ]
         )
     ],
     dependencies: [
-        .package(
-            url: "https://github.com/airbnb/lottie-spm.git",
-            from: "4.5.0"
-        ),
-        .package(
-            url: "https://github.com/SDWebImage/SDWebImage.git",
-            from: "5.21.0"
-        ),
-        .package(
-            url: "https://github.com/danielgindi/Charts.git",
-            from: "5.1.0"
-        ),
-        .package(
-            url: "https://github.com/daltoniam/Starscream.git",
-            from: "4.0.6"
-        ),
-        .package(
-            url: "https://github.com/guoyingtao/Mantis.git",
-            from: "2.23.0"
-        ),
-        .package(
-            url: "https://github.com/openid/AppAuth-iOS.git",
-            from: "1.7.6"
-        ),
-        .package(
-            url: "https://github.com/SDWebImage/SDWebImageSVGCoder.git",
-            from: "1.7.0"
-        )
+        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.5.0"),
+        .package(url: "https://github.com/SDWebImage/SDWebImage.git", exact: "5.21.0"),
+        .package(url: "https://github.com/danielgindi/Charts.git", exact: "5.1.0"),
+        .package(url: "https://github.com/daltoniam/Starscream.git", exact: "4.0.6"),
+        .package(url: "https://github.com/guoyingtao/Mantis.git", exact: "2.23.0"),
+        .package(url: "https://github.com/openid/AppAuth-iOS.git", exact: "1.7.6"),
+        .package(url: "https://github.com/SDWebImage/SDWebImageSVGCoder.git", exact: "1.7.0")
     ],
     targets: [
-        // MARK: - PlateauMobile
         .binaryTarget(
             name: "PlateauMobile",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/plateaumobile-binaries/Framework/PlateauMobile_1.5.1.xcframework.zip",
-            checksum: "7117cab48c4fc1cb79b6279c5701a8dfdf3872330cf5870eba89d8775157c708"
+            url: "https://github.com/STechQ/dist-plateau-mobile-ios/releases/download/1.5.3/PlateauMobile_1.5.3.xcframework.zip",
+            checksum: "366379fb36bd55525ba5ae5c956fb680b3f7461bacd91f8e444ef417c8d496ec"
         ),
 
-        // MARK: - Yoga & YogaKit
         .binaryTarget(
             name: "yoga",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/yoga-binaries/Framework/yoga.xcframework.zip",
+            url: "https://github.com/STechQ/dist-plateau-mobile-ios/releases/download/1.5.3/yoga.xcframework.zip",
             checksum: "eed3969061d998875a1f9c839b21bb249a908f10fa973ab320508b6b1ea60ee9"
         ),
+
         .binaryTarget(
             name: "YogaKit",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/main/yogakit-binaries/Framework/YogaKit.xcframework.zip",
+            url: "https://github.com/STechQ/dist-plateau-mobile-ios/releases/download/1.5.3/YogaKit.xcframework.zip",
             checksum: "8379dc61392cb88ad11fb5e833d9605e8f86799503d61271e80488915fbbcc27"
         ),
 
-        // MARK: - Wrapper Targets
         .target(
-            name: "PlateauMobileWrapper",
+            name: "PlateauMobileDependencies",
             dependencies: [
-                "PlateauMobile",
                 .product(name: "Starscream", package: "Starscream"),
                 .product(name: "Lottie", package: "lottie-spm"),
                 .product(name: "DGCharts", package: "Charts"),
@@ -83,15 +57,16 @@ let package = Package(
                 .product(name: "SDWebImage", package: "SDWebImage"),
                 .product(name: "SDWebImageSVGCoder", package: "SDWebImageSVGCoder")
             ],
-            path: "Sources/PlateauMobile"
+            path: "Sources/PlateauMobileDependencies"
         ),
+
         .target(
-            name: "YogaKitWrapper",
+            name: "YogaKitDependencies",
             dependencies: [
                 "YogaKit",
                 "yoga"
             ],
-            path: "Sources/YogaKit"
+            path: "Sources/YogaKitDependencies"
         )
     ]
 )
