@@ -45,37 +45,37 @@ let package = Package(
         .binaryTarget(
             name: "AppAuth",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/AppAuth.xcframework.zip",
-            checksum: "fdfbbe9280a2d21383dcf8b27bff2af6ba7f58173f8f5adc8c5993ac796039bf"
+            checksum: "283f8a72c87a955eae74453c94befc7bf489bd069d916d5da91e383233aa5ee1"
         ),
         .binaryTarget(
             name: "DGCharts",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/DGCharts.xcframework.zip",
-            checksum: "aab2d5de3b1e940b964574609368b93c9d5e71748388ed2e54a1a569208c5fa8"
+            checksum: "56551814c21e39e6a9e1a91b48046176443104ca0790798bb7059bae0a87c9a7"
         ),
         .binaryTarget(
             name: "Lottie",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/Lottie.xcframework.zip",
-            checksum: "ebbffd776358cf3d62d89c7a17c9a283aa1be555179406b586624e79b358b22b"
+            checksum: "ecab8a67ad8a0e8808a2a8e14fedc55ed0ab2ddcc3a325a1c56b4ff3e9b1738e"
         ),
         .binaryTarget(
             name: "Mantis",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/Mantis.xcframework.zip",
-            checksum: "9513e7d912b7c5a2c4d635c7db56b42a563b2089e89805f709c71e464fd3b34d"
+            checksum: "c9c3b0e54e2f90ad97ecef13a1c6db614de8ae4e0bcc39295f5d8ccb415d8bbb"
         ),
         .binaryTarget(
             name: "SDWebImage",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/SDWebImage.xcframework.zip",
-            checksum: "b69f1960f7beec10ade86e0f58b6d0b63b79a5697bb2507e542ead3d196af2fb"
+            checksum: "39926f083dc9ba7e0b01843e30e0c7fe4c53883325916b07b666036d71b42b92"
         ),
         .binaryTarget(
             name: "SDWebImageSVGCoder",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/SDWebImageSVGCoder.xcframework.zip",
-            checksum: "ee3559f60242cc6a46836464f5d4051d3a7fe759a7e71127d8288b61c937fe42"
+            checksum: "6b4bab23d76f1474acb52214142c0bc3cf3e4f15868787fac1c2844f40194274"
         ),
         .binaryTarget(
             name: "Starscream",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/Starscream.xcframework.zip",
-            checksum: "ca73310491a82869307c95d3f7a9a44e0034ad5d752ac48c04aa158858572d4c"
+            checksum: "9a37cda3bf1945e84a58d29551f3644946e3fe1625005b901eb455d8b3c05296"
         ),
 
         // MARK: - Wrapper Targets
