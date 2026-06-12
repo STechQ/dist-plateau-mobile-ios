@@ -58,7 +58,6 @@ let package = Package(
                 .product(name: "SDWebImageSVGCoder", package: "SDWebImageSVGCoder"),
                 .product(name: "DGCharts", package: "Charts"),
                 .product(name: "Starscream", package: "Starscream"),
-                .product(name: "Mantis", package: "Mantis"),
                 .product(name: "AppAuth", package: "AppAuth-iOS")
             ],
             path: "Sources/PlateauMobile"
