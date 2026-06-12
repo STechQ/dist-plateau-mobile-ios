@@ -26,7 +26,7 @@ let package = Package(
         .binaryTarget(
             name: "PlateauMobile",
             url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/plateaumobile-binaries/Framework/PlateauMobile.xcframework.zip",
-            checksum: "6cab69af49164d7c8a4159f414085ca520164266f6e6718da96657ec97a7098e"
+            checksum: "1da40f269e4602922f612f995d6d8803248a231a508b6f1829c6eab1fb281d63"
         ),
 
         // MARK: - Yoga & YogaKit
@@ -41,55 +41,11 @@ let package = Package(
             checksum: "8379dc61392cb88ad11fb5e833d9605e8f86799503d61271e80488915fbbcc27"
         ),
 
-        // MARK: - 3rd Party Binary Dependencies
-        .binaryTarget(
-            name: "AppAuth",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/AppAuth.xcframework.zip",
-            checksum: "283f8a72c87a955eae74453c94befc7bf489bd069d916d5da91e383233aa5ee1"
-        ),
-        .binaryTarget(
-            name: "DGCharts",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/DGCharts.xcframework.zip",
-            checksum: "56551814c21e39e6a9e1a91b48046176443104ca0790798bb7059bae0a87c9a7"
-        ),
-        .binaryTarget(
-            name: "Lottie",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/Lottie.xcframework.zip",
-            checksum: "ecab8a67ad8a0e8808a2a8e14fedc55ed0ab2ddcc3a325a1c56b4ff3e9b1738e"
-        ),
-        .binaryTarget(
-            name: "Mantis",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/Mantis.xcframework.zip",
-            checksum: "c9c3b0e54e2f90ad97ecef13a1c6db614de8ae4e0bcc39295f5d8ccb415d8bbb"
-        ),
-        .binaryTarget(
-            name: "SDWebImage",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/SDWebImage.xcframework.zip",
-            checksum: "39926f083dc9ba7e0b01843e30e0c7fe4c53883325916b07b666036d71b42b92"
-        ),
-        .binaryTarget(
-            name: "SDWebImageSVGCoder",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/SDWebImageSVGCoder.xcframework.zip",
-            checksum: "6b4bab23d76f1474acb52214142c0bc3cf3e4f15868787fac1c2844f40194274"
-        ),
-        .binaryTarget(
-            name: "Starscream",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/binaries/Starscream.xcframework.zip",
-            checksum: "9a37cda3bf1945e84a58d29551f3644946e3fe1625005b901eb455d8b3c05296"
-        ),
-
         // MARK: - Wrapper Targets
         .target(
             name: "PlateauMobileWrapper",
             dependencies: [
-                "PlateauMobile",
-                "Starscream",
-                "Lottie",
-                "DGCharts",
-                "Mantis",
-                "AppAuth",
-                "SDWebImage",
-                "SDWebImageSVGCoder"
+                "PlateauMobile"
             ],
             path: "Sources/PlateauMobile"
         ),
