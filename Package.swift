@@ -23,10 +23,9 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.5.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", exact: "5.21.0"),
-        .package(url: "https://github.com/SDWebImage/SDWebImageSVGCoder.git", exact: "1.8.0"),
+        .package(url: "https://github.com/SDWebImage/SDWebImageSVGCoder.git", exact: "1.7.0"),
         .package(url: "https://github.com/danielgindi/Charts.git", exact: "5.1.0"),
-        .package(url: "https://github.com/daltoniam/Starscream.git", exact: "4.0.8"),
-        .package(url: "https://github.com/guoyingtao/Mantis.git", exact: "2.31.2"),
+        .package(url: "https://github.com/daltoniam/Starscream.git", exact: "4.0.6"),
         .package(url: "https://github.com/openid/AppAuth-iOS.git", exact: "1.7.6")
     ],
     targets: [
