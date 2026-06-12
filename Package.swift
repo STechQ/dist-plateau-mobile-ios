@@ -25,8 +25,8 @@ let package = Package(
         // MARK: - PlateauMobile
         .binaryTarget(
             name: "PlateauMobile",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/plateaumobile-binaries/Framework/PlateauMobile_1.5.3.xcframework.zip",
-            checksum: "5ce9d7e6d47578c3a3401fe532af151c11df3db1f6e788ba2a854f8a6bb07654"
+            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.3/plateaumobile-binaries/Framework/PlateauMobile.xcframework.zip",
+            checksum: "6cab69af49164d7c8a4159f414085ca520164266f6e6718da96657ec97a7098e"
         ),
 
         // MARK: - Yoga & YogaKit
