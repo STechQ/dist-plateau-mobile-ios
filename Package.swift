@@ -25,7 +25,6 @@ let package = Package(
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", exact: "5.21.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImageSVGCoder.git", exact: "1.7.0"),
         .package(url: "https://github.com/danielgindi/Charts.git", exact: "5.1.0"),
-        .package(url: "https://github.com/daltoniam/Starscream.git", exact: "4.0.6"),
         .package(url: "https://github.com/openid/AppAuth-iOS.git", exact: "1.7.6")
     ],
     targets: [
@@ -57,7 +56,6 @@ let package = Package(
                 .product(name: "SDWebImage", package: "SDWebImage"),
                 .product(name: "SDWebImageSVGCoder", package: "SDWebImageSVGCoder"),
                 .product(name: "DGCharts", package: "Charts"),
-                .product(name: "Starscream", package: "Starscream"),
                 .product(name: "AppAuth", package: "AppAuth-iOS")
             ],
             path: "Sources/PlateauMobile"
