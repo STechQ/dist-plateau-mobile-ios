@@ -6,5 +6,5 @@ import Foundation
 @_exported import PlateauMobile
 
 public struct PlateauMobileVersion {
-    public static let version = "1.5.3"
+    public static let version = "1.5.7"
 }
