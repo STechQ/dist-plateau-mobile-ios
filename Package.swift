@@ -17,7 +17,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/airbnb/lottie-ios.git", exact: "4.5.0"),
+        .package(url: "https://github.com/airbnb/lottie-spm.git", exact: "4.5.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", exact: "5.21.0"),
         .package(url: "https://github.com/SDWebImage/SDWebImageSVGCoder.git", exact: "1.7.0"),
         .package(url: "https://github.com/danielgindi/Charts.git", exact: "5.1.0"),
@@ -48,7 +48,7 @@ let package = Package(
             name: "PlateauMobileWrapper",
             dependencies: [
                 "PlateauMobile",
-                .product(name: "Lottie", package: "lottie-ios"),
+                .product(name: "Lottie", package: "lottie-spm"),
                 .product(name: "SDWebImage", package: "SDWebImage"),
                 .product(name: "SDWebImageSVGCoder", package: "SDWebImageSVGCoder"),
                 .product(name: "DGCharts", package: "Charts"),
