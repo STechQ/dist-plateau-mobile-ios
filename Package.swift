@@ -27,19 +27,19 @@ let package = Package(
         // MARK: - PlateauMobile
         .binaryTarget(
             name: "PlateauMobile",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.8/plateaumobile-binaries/Framework/PlateauMobile.xcframework.zip",
+            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.9/plateaumobile-binaries/Framework/PlateauMobile.xcframework.zip",
             checksum: "d118469d64a7bdfc660b05a32cf5d20875062c5463b27a1f8c06e27c05aff264"
         ),
 
         // MARK: - Yoga & YogaKit
         .binaryTarget(
             name: "yoga",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.8/yoga-binaries/Framework/yoga.xcframework.zip",
+            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.9/yoga-binaries/Framework/yoga.xcframework.zip",
             checksum: "c66fbf67e5121b9e9ff88c68b5e2fa7da5bb4c1d2cfe9e8ca53631bce72328c4"
         ),
         .binaryTarget(
             name: "YogaKit",
-            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.8/yogakit-binaries/Framework/YogaKit.xcframework.zip",
+            url: "https://raw.githubusercontent.com/STechQ/dist-plateau-mobile-ios/1.5.9/yogakit-binaries/Framework/YogaKit.xcframework.zip",
             checksum: "6da4aa64ed1d23fd664b8f83a401ed5931c8aad99193cc21cb9aee0879cad0bc"
         ),
 
